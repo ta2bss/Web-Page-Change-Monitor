@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="tr" >
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>TA2BSS &#8211; Her Telden</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="TA2BSS &raquo; beslemesi" href="http://ta2bss.com/index.php/feed/" />
+<link rel="alternate" type="application/rss+xml" title="TA2BSS &raquo; yorum beslemesi" href="http://ta2bss.com/index.php/comments/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v8.3.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-2BD10BMPLD"  data-cfasync="false" data-wpfc-render="false" async></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '8.3.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStrs = [
+										'ga-disable-G-2BD10BMPLD',
+														];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						if ( document.cookie.indexOf( disableStrs[ index ] + '=true' ) > -1 ) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for ( var index = 0; index < disableStrs.length; index++ ) {
+						document.cookie = disableStrs[ index ] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[ disableStrs[ index ] ] = true;
+					}
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if ( mi_track_user ) {
+					function __gtagDataLayer() {
+						dataLayer.push( arguments );
+					}
+
+					function __gtagTracker( type, name, parameters ) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply( null, arguments );
+							return;
+						}
+
+						if ( type === 'event' ) {
+															parameters.send_to = monsterinsights_frontend.v4_id;
+								var hookName = name;
+								if ( typeof parameters[ 'event_category' ] !== 'undefined' ) {
+									hookName = parameters[ 'event_category' ] + ':' + name;
+								}
+
+								if ( typeof MonsterInsightsDualTracker.trackers[ hookName ] !== 'undefined' ) {
+									MonsterInsightsDualTracker.trackers[ hookName ]( parameters );
+								} else {
+									__gtagDataLayer( 'event', name, parameters );
+								}
+							
+													} else {
+							__gtagDataLayer.apply( null, arguments );
+						}
+					}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+											} );
+										__gtagTracker( 'config', 'G-2BD10BMPLD', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;											(function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( 'pageview' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[2] ) {
+												hitObject = {
+													'eventAction': 'page_view',
+													'page_path' : arguments[2],
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( typeof arguments[5] === 'object' ) {
+											Object.assign( hitObject, arguments[5] );
+										}
+										if ( 'undefined' !== typeof arguments[1].hitType ) {
+											hitObject = arguments[1];
+											if ( 'pageview' === hitObject.hitType ) {
+												hitObject.eventAction = 'page_view';
+											}
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var arg, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+										'page' : 'page_path',
+										'location' : 'page_location',
+										'title' : 'page_title',
+									};
+									for ( arg in args ) {
+																				if ( ! ( ! args.hasOwnProperty(arg) || ! gaMap.hasOwnProperty(arg) ) ) {
+											hit[gaMap[arg]] = args[arg];
+										} else {
+											hit[arg] = args[arg];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						})();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/ta2bss.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://ta2bss.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://ta2bss.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.7.2' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-style-css'  href='http://ta2bss.com/wp-content/themes/twentytwentyone/style.css?ver=1.4' media='all' />
+<style id='twenty-twenty-one-style-inline-css'>
+:root{--global--color-background: #0077aa;--global--color-primary: #fff;--global--color-secondary: #fff;--button--color-background: #fff;--button--color-text-hover: #fff;--table--stripes-border-color: rgba(240, 240, 240, 0.15);--table--stripes-background-color: rgba(240, 240, 240, 0.15);}
+</style>
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css'  href='http://ta2bss.com/wp-content/themes/twentytwentyone/assets/css/print.css?ver=1.4' media='print' />
+<link rel='stylesheet' id='hcb-style-css'  href='http://ta2bss.com/wp-content/plugins/highlighting-code-block//build/css/hcb_style.css?ver=1.5.5' media='all' />
+<style id='hcb-style-inline-css'>
+:root{--hcb-font-size: 14px}:root{--hcb-font-size--mobile: 13px}:root{--hcb-font-family:Menlo, Consolas, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;}
+</style>
+<link rel='stylesheet' id='hcb-coloring-css'  href='http://ta2bss.com/wp-content/plugins/highlighting-code-block//build/css/coloring_light.css?ver=1.5.5' media='all' />
+<link rel='stylesheet' id='__EPYT__style-css'  href='http://ta2bss.com/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css?ver=14.0.1.4' media='all' />
+<style id='__EPYT__style-inline-css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<script id='monsterinsights-frontend-script-js-extra'>
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"http:\/\/ta2bss.com","hash_tracking":"false","ua":"","v4_id":"G-2BD10BMPLD"};
+</script>
+<script src='http://ta2bss.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=8.3.2' id='monsterinsights-frontend-script-js'></script>
+<script src='http://ta2bss.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script src='http://ta2bss.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script id='__ytprefs__-js-extra'>
+var _EPYT_ = {"ajaxurl":"http:\/\/ta2bss.com\/wp-admin\/admin-ajax.php","security":"fb5d5296e5","gallery_scrolloffset":"20","eppathtoscripts":"http:\/\/ta2bss.com\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"http:\/\/ta2bss.com\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs_widget__\"]","epdovol":"1","version":"14.0.1.4","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+</script>
+<script src='http://ta2bss.com/wp-content/plugins/youtube-embed-plus/scripts/ytprefs.min.js?ver=14.0.1.4' id='__ytprefs__-js'></script>
+<link rel="https://api.w.org/" href="http://ta2bss.com/index.php/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ta2bss.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ta2bss.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.2" />
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style id="custom-background-css">
+body.custom-background { background-color: #0077aa; }
+</style>
+	<link rel="icon" href="http://ta2bss.com/wp-content/uploads/2021/03/favicon-1.ico" sizes="32x32" />
+<link rel="icon" href="http://ta2bss.com/wp-content/uploads/2021/03/favicon-1.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://ta2bss.com/wp-content/uploads/2021/03/favicon-1.ico" />
+<meta name="msapplication-TileImage" content="http://ta2bss.com/wp-content/uploads/2021/03/favicon-1.ico" />
+</head>
+
+<body class="home blog custom-background wp-custom-logo wp-embed-responsive is-dark-theme no-js hfeed has-main-navigation">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">İçeriğe geç</a>
+
+	
+<header id="masthead" class="site-header has-logo has-menu" role="banner">
+
+	
+
+<div class="site-branding">
+
+			<div class="site-logo"><span class="custom-logo-link"><img width="300" height="100" src="http://ta2bss.com/wp-content/uploads/2021/03/Logo-Her-Telden.png" class="custom-logo" alt="" /></span></div>
+	
+						<h1 class="screen-reader-text">TA2BSS</h1>
+			
+	</div><!-- .site-branding -->
+	
+	<nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="Birincil menü">
+		<div class="menu-button-container">
+			<button id="primary-mobile-menu" class="button" aria-controls="primary-menu-list" aria-expanded="false">
+				<span class="dropdown-icon open">Menü					<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 6H19.5V7.5H4.5V6ZM4.5 12H19.5V13.5H4.5V12ZM19.5 18H4.5V19.5H19.5V18Z" fill="currentColor"/></svg>				</span>
+				<span class="dropdown-icon close">Kilitle					<svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 10.9394L5.53033 4.46973L4.46967 5.53039L10.9393 12.0001L4.46967 18.4697L5.53033 19.5304L12 13.0607L18.4697 19.5304L19.5303 18.4697L13.0607 12.0001L19.5303 5.53039L18.4697 4.46973L12 10.9394Z" fill="currentColor"/></svg>				</span>
+			</button><!-- #primary-mobile-menu -->
+		</div><!-- .menu-button-container -->
+		<div class="primary-menu-container"><ul id="primary-menu-list" class="menu-wrapper"><li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26"><a href="http://ta2bss.com/" aria-current="page">Ana sayfa</a></li>
+<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-151"><a href="http://ta2bss.com/index.php/python/">Python</a><button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)"><span class="icon-plus"><svg class="svg-icon" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/></svg></span><span class="icon-minus"><svg class="svg-icon" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/></svg></span><span class="screen-reader-text">Menüyü aç</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-372" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-372"><a href="http://ta2bss.com/index.php/2022/01/25/python-ile-coingecko-com-apiden-basit-veri-cekimi/">Python ile coingecko.com API’den basit veri çekimi.</a></li>
+	<li id="menu-item-347" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-347"><a href="http://ta2bss.com/index.php/2021/09/27/python-ile-dosya-yaratma-ve-icerik-olusturma-icerik-cekme/">Python ile dosya yaratma ve içerik oluşturma , içerik çekme.</a></li>
+	<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-327"><a href="http://ta2bss.com/index.php/2021/06/01/python-ile-gmail-hesabindan-e-posta-yollama/">Python ile Gmail hesabından e-posta yollama:</a></li>
+	<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-283"><a href="http://ta2bss.com/index.php/2021/05/23/python-ile-ftp-sunucusuna-baglanma-ve-dosya-gonderme/">Python ile FTP sunucusuna bağlanma ve dosya gönderme</a></li>
+	<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-393"><a href="http://ta2bss.com/index.php/2022/04/12/python-ile-tarih-ve-saat-yazdirma/">Python ile tarih ve saat yazdırma</a></li>
+	<li id="menu-item-148" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-148"><a href="http://ta2bss.com/index.php/2021/05/06/pythondda-re-search-ve-replace-fonksiyonlari-ile-metnin-icinden-belli-bir-bolumu-cekme-ve-istenilen-karakterleri-degistirme/">Python : re.search – replace</a></li>
+	<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-387"><a href="http://ta2bss.com/index.php/2022/01/28/python-try-except-basit-ornek/">Python: try-except basit örnek</a></li>
+	<li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-191"><a href="http://ta2bss.com/index.php/2021/05/13/mp3-dosyasi-oynatma/">Python: mp3 dosyası oynatma</a></li>
+	<li id="menu-item-313" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-313"><a href="http://ta2bss.com/index.php/2021/05/29/python-def-ve-return/">Python – def ve return</a></li>
+	<li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-333"><a href="http://ta2bss.com/index.php/2021/06/04/python-program-akisinda-satir-numarasini-yazdirma/">Python: Program akışında satır numarasını yazdırma</a></li>
+</ul>
+</li>
+<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-174"><a href="http://ta2bss.com/index.php/blockchain-kripto/">Blockchain-Kripto</a><button class="sub-menu-toggle" aria-expanded="false" onClick="twentytwentyoneExpandSubMenu(this)"><span class="icon-plus"><svg class="svg-icon" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.2h-5.2V6h-1.6v5.2H6v1.6h5.2V18h1.6v-5.2H18z" fill="currentColor"/></svg></span><span class="icon-minus"><svg class="svg-icon" width="18" height="18" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6 11h12v2H6z" fill="currentColor"/></svg></span><span class="screen-reader-text">Menüyü aç</span></button>
+<ul class="sub-menu">
+	<li id="menu-item-371" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-371"><a href="http://ta2bss.com/index.php/2022/01/25/python-ile-coingecko-com-apiden-basit-veri-cekimi/">Python ile coingecko.com API’den basit veri çekimi.</a></li>
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-91"><a href="http://ta2bss.com/index.php/2021/03/19/api_excel/">Microsoft 365 Excel’e Coinmarketcap API’den data çekmek</a></li>
+</ul>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://ta2bss.com/index.php/hakkimizda/">Hakkında</a></li>
+</ul></div>	</nav><!-- #site-navigation -->
+
+</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+
+
+
+<article id="post-391" class="post-391 post type-post status-publish format-standard hentry category-python tag-datetime tag-python tag-tarih tag-zaman entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2022/04/12/python-ile-tarih-ve-saat-yazdirma/">Python ile tarih ve saat yazdırma</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Tarih ve saat yazdırmak için datetime modülünü kullanıyoruz %Y : Sene%m : Ay%d : Gün %H : Saat%M : Dakika%S : Saniye İle istediğimiz formatta çıktı alabiliriz</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2022-04-12T13:40:01+03:00">12/04/2022</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/datetime/" rel="tag">datetime</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a>, <a href="http://ta2bss.com/index.php/tag/tarih/" rel="tag">tarih</a>, <a href="http://ta2bss.com/index.php/tag/zaman/" rel="tag">zaman</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-374" class="post-374 post type-post status-publish format-standard hentry category-python tag-except tag-python tag-try entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2022/01/28/python-try-except-basit-ornek/">Python: try-except basit örnek</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Yazdığımız kodlarda bir hata olduğunda veya işlem bir hataya sebep program durur ve bir hata mesajı çıkar. Örneğin 10 sayısını 0&#8217;a bölmeye çalıştığımızda: Görüldüğü gibi ZeroDivisionError hatası aldık ve program durdu. Peki biz programın durmasını değil de bize bir mesaj çıkarıp tekrar denememizi istese bunu nasıl kodlamamız gerekirdi. Bu durumda try / except komutlarını kullanabiliriz.&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2022/01/28/python-try-except-basit-ornek/">Okumaya devam et <span class="screen-reader-text">Python: try-except basit örnek</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2022-01-28T21:45:22+03:00">28/01/2022</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/except/" rel="tag">except</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a>, <a href="http://ta2bss.com/index.php/tag/try/" rel="tag">try</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-362" class="post-362 post type-post status-publish format-standard hentry category-kripto tag-api tag-coingecko-com tag-kripto tag-python entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2022/01/25/python-ile-coingecko-com-apiden-basit-veri-cekimi/">Python ile coingecko.com API&#8217;den basit veri çekimi.</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Python kullanarak Coingecko API&#8217;den veri çekmenin kolay şekli aşağıdaki şekilde yapılabilir. Öncelikle Coingecko sitesinde kriptolara verilen Coin ID&#8217;leri bilmemiz lazım. 2022 Ocak tarihindeki liste şu şekilde idi. Açılan dosyada arama yaparak kullanmak istediğimiz coinin id sinin notunu alıyoruz. Örneğin; Bitcoin için yaptığımız aramada coin id&#8217;si ilk satırda da görüldüğü gibi &#8220;bitcoin&#8221;. Bu listenin güncel haline&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2022/01/25/python-ile-coingecko-com-apiden-basit-veri-cekimi/">Okumaya devam et <span class="screen-reader-text">Python ile coingecko.com API&#8217;den basit veri çekimi.</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2022-01-25T20:36:06+03:00">25/01/2022</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/kripto/" rel="category tag">Kripto</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/api/" rel="tag">API</a>, <a href="http://ta2bss.com/index.php/tag/coingecko-com/" rel="tag">coingecko.com</a>, <a href="http://ta2bss.com/index.php/tag/kripto/" rel="tag">Kripto</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-341" class="post-341 post type-post status-publish format-standard hentry category-kripto entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/09/27/python-ile-dosya-yaratma-ve-icerik-olusturma-icerik-cekme/">Python ile dosya yaratma ve içerik oluşturma , içerik çekme.</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Pythonda dosya oluşturmak ve içerik oluşturmak için kullanacağımız komutlar &#8220;open&#8221; ve &#8220;write&#8221; komutlarıdır. Yeni bir dosya yaratmak için aşağıdaki örneğe göz atalım: Burada deneme.txt isimli bir dosya yaratıyoruz ve içerik ekliyoruz. Bu dosyadaki içeriği okumak için de &#8220;readlines&#8221; komutunu kullanabiliriz yukarıdaki kod dosya içeriğini ekrana yazdıracaktır. Komutlarla beraber kullandığımız parametreler:&#8220;r&#8221; : Okumak için bir dosya&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2021/09/27/python-ile-dosya-yaratma-ve-icerik-olusturma-icerik-cekme/">Okumaya devam et <span class="screen-reader-text">Python ile dosya yaratma ve içerik oluşturma , içerik çekme.</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-09-27T21:17:44+03:00">27/09/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/kripto/" rel="category tag">Kripto</a> olarak sınıflandırılmış </span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-331" class="post-331 post type-post status-publish format-standard hentry category-python tag-python tag-satir entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/06/04/python-program-akisinda-satir-numarasini-yazdirma/">Python: Program akışında satır numarasını yazdırma</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Bazen kodlarımızı yazarken program akışında nerede olduğumuzu görmemiz gerekebilir. Bunun için kodumuza aşağıdaki satırı yapıştırırsak , program akışı esnasında programın hangi satırda olduğunu izleyebiliriz.</p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-06-04T20:22:47+03:00">04/06/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a>, <a href="http://ta2bss.com/index.php/tag/satir/" rel="tag">satır</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-324" class="post-324 post type-post status-publish format-standard hentry category-python tag-e-posta tag-python tag-smtp tag-smtplib entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/06/01/python-ile-gmail-hesabindan-e-posta-yollama/">Python ile Gmail hesabından e-posta yollama:</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Python kullanarak Gmail hesabınızdan e-posta yollamak için ilk iş olarak Gmail hesabımızın &#8220;Güvenliği Düşük Uygulamalara&#8221; erişiminin açık olduğuna emin olmamız gerekiyor. Bunu aşağıdaki linkten kontrol edip eğer açık değilse açmalıyız. https://myaccount.google.com/lesssecureapps Örnek 1:E-Postayı göndermemiz icin smtplib modülünü kullanıyoruz. İlk defa e-posta yolladığımızda Google&#8217;dan bir güvenlik uyarısı gelebilir. (Bilinmeyen bir program hesabınıza erişmeye çalışıyor tarzında.) Bu&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2021/06/01/python-ile-gmail-hesabindan-e-posta-yollama/">Okumaya devam et <span class="screen-reader-text">Python ile Gmail hesabından e-posta yollama:</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-06-01T10:54:39+03:00">01/06/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/e-posta/" rel="tag">e-posta</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a>, <a href="http://ta2bss.com/index.php/tag/smtp/" rel="tag">smtp</a>, <a href="http://ta2bss.com/index.php/tag/smtplib/" rel="tag">smtplib</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-307" class="post-307 post type-post status-publish format-standard hentry category-python tag-def tag-fonksiyon tag-python tag-return entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/05/29/python-def-ve-return/">Python &#8211; def ve return</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>def &#8211; basit bir örnek: Python&#8217;da fonksiyonlar kullanmamızın en önemli sebepleri programımızda aynı işlemleri birden fazla yaptırmak istememiz durumunda aynı kodu tekrar tekrar yazmayarak hem kodumuzun daha derli toplu görünmesini sağlamak hem de vakit kazanmaktır. Basit bir örnek vermek gerekirse, mesela programızının belli yerlerinde a ve b değişkenlerinin toplamlarınının 7&#8217;ye bölümü sonucunda kalan değerin faktoriyelini&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2021/05/29/python-def-ve-return/">Okumaya devam et <span class="screen-reader-text">Python &#8211; def ve return</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-05-29T23:02:06+03:00">29/05/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/def/" rel="tag">def</a>, <a href="http://ta2bss.com/index.php/tag/fonksiyon/" rel="tag">fonksiyon</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a>, <a href="http://ta2bss.com/index.php/tag/return/" rel="tag">return</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-272" class="post-272 post type-post status-publish format-standard hentry category-python tag-ftp tag-ftplib tag-python entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/05/23/python-ile-ftp-sunucusuna-baglanma-ve-dosya-gonderme/">Python ile FTP sunucusuna bağlanma ve dosya gönderme</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>ftplib: Python kullanarak bir ftp sunucusuna bağlanmanın yollarından biri &#8216;ftplib&#8217; modülünü kullanmak. Örnek kod aşağıdaki gibi.Öncelikle sunucuya bağlanıyor, daha sonra deneme.txt isimli dosyayı sunucuya yolluyoruz.Sonunda da FTP bağlantısını kesiyoruz. Eğer dosyayı sunucuda bulunan belli bir klasöre yollamak istiyorsak, cwd komutunu kullanabiliriz. Örneğin dosyayı aşağıdaki örnekte sunucudaki &#8220;\birinciklasor\ikinciklasor&#8221; konumuna koyalım. &#8216;ftplib&#8217; modülü ile ilgili daha geniş&hellip; <a class="more-link" href="http://ta2bss.com/index.php/2021/05/23/python-ile-ftp-sunucusuna-baglanma-ve-dosya-gonderme/">Okumaya devam et <span class="screen-reader-text">Python ile FTP sunucusuna bağlanma ve dosya gönderme</span></a></p>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-05-23T16:17:21+03:00">23/05/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/python/" rel="category tag">Python</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/ftp/" rel="tag">ftp</a>, <a href="http://ta2bss.com/index.php/tag/ftplib/" rel="tag">ftplib</a>, <a href="http://ta2bss.com/index.php/tag/python/" rel="tag">python</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-264" class="post-264 post type-post status-publish format-standard hentry category-covid tag-covid tag-hasta-sayisi tag-saglik-bakanligi-verileri entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/05/23/2021-saglik-bakanligi-covid-tablosu-verileri/">2021 Sağlık Bakanlığı &#8211; Covid Tablosu Verileri</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-05-23T15:38:16+03:00">23/05/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/covid/" rel="category tag">Covid</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/covid/" rel="tag">Covid</a>, <a href="http://ta2bss.com/index.php/tag/hasta-sayisi/" rel="tag">Hasta Sayısı</a>, <a href="http://ta2bss.com/index.php/tag/saglik-bakanligi-verileri/" rel="tag">Sağlık Bakanlığı Verileri</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+<article id="post-261" class="post-261 post type-post status-publish format-standard hentry category-covid tag-covid tag-hasta-sayisi tag-saglik-bakanligi-verileri entry">
+
+	
+<header class="entry-header">
+	<h2 class="entry-title default-max-width"><a href="http://ta2bss.com/index.php/2021/05/23/2020-saglik-bakanligi-covid-tablosu-verileri/">2020 Sağlık Bakanlığı &#8211; Covid Tablosu Verileri</a></h2></header><!-- .entry-header -->
+
+	<div class="entry-content">
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer default-max-width">
+		<span class="posted-on">Yayım tarihi <time class="entry-date published updated" datetime="2021-05-23T15:34:11+03:00">23/05/2021</time></span><div class="post-taxonomies"><span class="cat-links"><a href="http://ta2bss.com/index.php/category/covid/" rel="category tag">Covid</a> olarak sınıflandırılmış </span><span class="tags-links"><a href="http://ta2bss.com/index.php/tag/covid/" rel="tag">Covid</a>, <a href="http://ta2bss.com/index.php/tag/hasta-sayisi/" rel="tag">Hasta Sayısı</a>, <a href="http://ta2bss.com/index.php/tag/saglik-bakanligi-verileri/" rel="tag">Sağlık Bakanlığı Verileri</a> ile etiketlenmiş</span></div>	</footer><!-- .entry-footer -->
+</article><!-- #post-${ID} -->
+
+	<nav class="navigation pagination" role="navigation" aria-label="Yazılar">
+		<h2 class="screen-reader-text">Yazı dolaşımı</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">Sayfa 1</span>
+<a class="page-numbers" href="http://ta2bss.com/index.php/page/2/">Sayfa 2</a>
+<a class="next page-numbers" href="http://ta2bss.com/index.php/page/2/"><span class="nav-next-text">Daha eski <span class="nav-short">yazılar</span></span> <svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m4 13v-2h12l-4-4 1-2 7 7-7 7-1-2 4-4z" fill="currentColor"/></svg></a></div>
+	</nav>			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- #content -->
+
+	
+	<aside class="widget-area">
+		<section id="search-2" class="widget widget_search"><form role="search"  method="get" class="search-form" action="http://ta2bss.com/">
+	<label for="search-form-1">Arama&hellip;</label>
+	<input type="search" id="search-form-1" class="search-field" value="" name="s" />
+	<input type="submit" class="search-submit" value="Ara" />
+</form>
+</section>
+		<section id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widget-title">Son Yazılar</h2><nav role="navigation" aria-label="Son Yazılar">
+		<ul>
+											<li>
+					<a href="http://ta2bss.com/index.php/2022/04/12/python-ile-tarih-ve-saat-yazdirma/">Python ile tarih ve saat yazdırma</a>
+									</li>
+											<li>
+					<a href="http://ta2bss.com/index.php/2022/01/28/python-try-except-basit-ornek/">Python: try-except basit örnek</a>
+									</li>
+											<li>
+					<a href="http://ta2bss.com/index.php/2022/01/25/python-ile-coingecko-com-apiden-basit-veri-cekimi/">Python ile coingecko.com API&#8217;den basit veri çekimi.</a>
+									</li>
+											<li>
+					<a href="http://ta2bss.com/index.php/2021/09/27/python-ile-dosya-yaratma-ve-icerik-olusturma-icerik-cekme/">Python ile dosya yaratma ve içerik oluşturma , içerik çekme.</a>
+									</li>
+											<li>
+					<a href="http://ta2bss.com/index.php/2021/06/04/python-program-akisinda-satir-numarasini-yazdirma/">Python: Program akışında satır numarasını yazdırma</a>
+									</li>
+					</ul>
+
+		</nav></section><section id="recent-comments-2" class="widget widget_recent_comments"><h2 class="widget-title">Son Yorumlar</h2><nav role="navigation" aria-label="Son Yorumlar"><ul id="recentcomments"><li class="recentcomments"><a href="http://ta2bss.com/index.php/2021/03/19/api_excel/#comment-12">Microsoft 365 Excel&#8217;e Coinmarketcap API&#8217;den data çekmek</a> için <span class="comment-author-link"><a href='http://ta2bss.com' rel='external nofollow ugc' class='url'>ta2bss</a></span></li><li class="recentcomments"><a href="http://ta2bss.com/index.php/2021/03/19/api_excel/#comment-11">Microsoft 365 Excel&#8217;e Coinmarketcap API&#8217;den data çekmek</a> için <span class="comment-author-link">halil</span></li><li class="recentcomments"><a href="http://ta2bss.com/index.php/2021/03/19/api_excel/#comment-4">Microsoft 365 Excel&#8217;e Coinmarketcap API&#8217;den data çekmek</a> için <span class="comment-author-link">hakan</span></li><li class="recentcomments"><a href="http://ta2bss.com/index.php/2021/03/19/api_excel/#comment-3">Microsoft 365 Excel&#8217;e Coinmarketcap API&#8217;den data çekmek</a> için <span class="comment-author-link">Ahmet Ersay</span></li></ul></nav></section>	</aside><!-- .widget-area -->
+
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+
+					<nav aria-label="İkincil menü" class="footer-navigation">
+				<ul class="footer-navigation-wrapper">
+					<li id="menu-item-33" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33"><a href="mailto:info@ta2bss.com"><svg class="svg-icon" width="24" height="24" aria-hidden="true" role="img" focusable="false" width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M20,4H4C2.895,4,2,4.895,2,6v12c0,1.105,0.895,2,2,2h16c1.105,0,2-0.895,2-2V6C22,4.895,21.105,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z"></path></svg><span class="screen-reader-text">E-posta</a></li>
+				</ul><!-- .footer-navigation-wrapper -->
+			</nav><!-- .footer-navigation -->
+				<div class="site-info">
+			<div class="site-name">
+									<div class="site-logo"><span class="custom-logo-link"><img width="300" height="100" src="http://ta2bss.com/wp-content/uploads/2021/03/Logo-Her-Telden.png" class="custom-logo" alt="" /></span></div>
+							</div><!-- .site-name -->
+			<div class="powered-by">
+				<a href="https://wordpress.org/">WordPress</a> ile güçlendirilmiştir.			</div><!-- .powered-by -->
+
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<script>document.body.classList.remove("no-js");</script>	<script>
+	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
+		document.body.classList.add( 'is-IE' );
+	}
+	</script>
+	<script id='twenty-twenty-one-ie11-polyfills-js-after'>
+( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="http://ta2bss.com/wp-content/themes/twentytwentyone/assets/js/polyfills.js?ver=1.4"></scr' + 'ipt>' );
+</script>
+<script src='http://ta2bss.com/wp-content/themes/twentytwentyone/assets/js/primary-navigation.js?ver=1.4' id='twenty-twenty-one-primary-navigation-script-js'></script>
+<script src='http://ta2bss.com/wp-content/themes/twentytwentyone/assets/js/responsive-embeds.js?ver=1.4' id='twenty-twenty-one-responsive-embeds-script-js'></script>
+<script src='http://ta2bss.com/wp-includes/js/clipboard.min.js?ver=5.7.2' id='clipboard-js'></script>
+<script src='http://ta2bss.com/wp-content/plugins/highlighting-code-block//assets/js/prism.js?ver=1.5.5' id='hcb-prism-js'></script>
+<script src='http://ta2bss.com/wp-content/plugins/highlighting-code-block//build/js/hcb_script.js?ver=1.5.5' id='hcb-script-js'></script>
+<script src='http://ta2bss.com/wp-content/plugins/youtube-embed-plus/scripts/fitvids.min.js?ver=14.0.1.4' id='__ytprefsfitvids__-js'></script>
+<script src='http://ta2bss.com/wp-includes/js/wp-embed.min.js?ver=5.7.2' id='wp-embed-js'></script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+	</script>
+	
+</body>
+</html>
