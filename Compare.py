@@ -1,6 +1,6 @@
 import requests
 import os
-url = 'https://nodes.guru/'
+url = 'http://milliyet.com/'
 r = requests.get(url, allow_redirects=True)
 f= open ("data","wb")
 f.write(r.content)
