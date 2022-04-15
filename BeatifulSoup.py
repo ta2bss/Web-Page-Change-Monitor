@@ -25,5 +25,5 @@ def text_from_html(url):
             sen = sen.rstrip().lstrip()
             clean_text += sen+','
     return clean_text
-url = 'http://ta2bss.com/'
+url = 'https://testnet.run/'
 print(text_from_html(url))
