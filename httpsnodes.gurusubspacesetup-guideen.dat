@@ -1,0 +1,36 @@
+Nodes Guru - Subspace (EN guide)NodesGuruJoin our communitySubspace - Setup GuideBack to projectStuck? AskNodes Guru telegram communityRent onVultrDigitalOceanLinodeHetzner1. Installing
+If you don’t already have an subspace wallet, follow step 2. Create wallet, then go to the next step.
+Replace YOUR_NODE_NAME with your node name and YOUR_WALLET with the wallet address received in the second step.
+SUBSPACE_NODENAME=YOUR_NODE_NAME
+SUBSPACE_WALLET=YOUR_WALLET
+echo 'export SUBSPACE_NODENAME='$SUBSPACE_NODENAME >> $HOME/.bash_profile
+echo 'export SUBSPACE_WALLET='$SUBSPACE_WALLET >> $HOME/.bash_profile
+Example on the screenshot!
+
+Use our script for a quick installation:
+wget -O subspace.sh https://api.nodes.guru/subspace.sh && chmod +x subspace.sh && ./subspace.sh
+2. Create wallet
+To create a wallet you need  go to the explorer and follow the examples in the screenshots.
+Don’t forget save mnemonics!
+
+
+
+
+
+
+3. Additional
+Check node logs:
+journalctl -u subspaced -f
+Check farmer logs:
+journalctl -u subspaced-farmer -f
+Restart node:
+sudo systemctl restart subspaced
+Restart farmer:
+sudo systemctl restart subspaced-farmer
+Delete node:
+sudo systemctl stop subspaced subspaced-farmer
+sudo systemctl disable subspaced subspaced-farmer
+rm -rf ~/.local/share/subspace*
+rm -rf /etc/systemd/system/subspaced*
+rm -rf /usr/local/bin/subspace*
+2021 Made withfor cryptocommunityNodes CheckerSubmit testnetContact usDonate

@@ -1,7 +1,12 @@
+import os, sys
+from win32com.client.gencache import EnsureDispatch as Dispatch
+import sqlite3
 import hashlib
 from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
+
+
 
 now = datetime.now()
 date_time = now.strftime("%Y-%m-%d %H:%M")
@@ -10,7 +15,7 @@ date_time = now.strftime("%Y-%m-%d %H:%M")
 # .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php
 
 s = requests_html.HTMLSession()
-target = ["https://nodes.guru/"  , "https://nodes.guru/subspace/setup-guide/en" ,"https://www.milliyet.com.tr/"]
+target = ["https://nodes.guru/"  , "https://nodes.guru/subspace/setup-guide/en"]
 
 for x in (range(len(target))):
     page = s.get(target[x])
@@ -22,3 +27,13 @@ for x in (range(len(target))):
     f=open ("data","a")
     f.write(target[x] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
+
+    URL = target[x]
+    FILEPATH = ("okay.mhtml")
+
+    message = Dispatch("CDO.Message")
+    message.CreateMHTMLBody(URL)
+    stream = Dispatch(message.GetStream())
+    stream.SaveToFile(FILEPATH, 2)
+    stream.Close()
+
