@@ -33,6 +33,9 @@ for x in (range(len(target))):
     oldpage = target[x]
     oldpage = oldpage.replace(":","").replace("/","")
     print (oldpage)
+
+
+
     f=open (oldpage +".dat","w")
-    f.write(contents)
+    f.write(contents+"\n"+hash_object.hexdigest())
     f.close()
