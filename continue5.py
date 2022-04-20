@@ -1,11 +1,8 @@
-import sqlite3
 import hashlib
 from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
 import os
-import sys
-import pathlib
 
 PageFolder = 'Datas/Pages'
 Folder_Compilation = os.listdir(PageFolder)
@@ -67,6 +64,15 @@ for line in sorted(f):
     d.write(line)
 f.close()
 d.close()
+
+for filename in Folder_Compilation:
+    file = open (filename ,"r")
+    filecontent = file.readlines()
+    filecontent = str(filecontent)
+    print (type (filecontent))
+    file.close()
+    print(filecontent)
+
 
 
 
