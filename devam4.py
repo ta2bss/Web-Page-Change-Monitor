@@ -7,28 +7,19 @@ import os
 import sys
 import pathlib
 
-
 PageFolder = 'Datas/Pages'
-Deletingoldfiles = os.listdir(PageFolder)
+Folder_Compilation = os.listdir(PageFolder)
 
-for item in Deletingoldfiles:
-    if item.endswith(".old"):
-        os.remove(os.path.join(PageFolder, item))
+for filename in Folder_Compilation:
+    if filename.endswith(".old"):
+        os.remove(os.path.join(PageFolder, filename))
 
-
-
-for filename in os.listdir(PageFolder):
+for filename in Folder_Compilation:
     infilename = os.path.join(PageFolder,filename)
     if not os.path.isfile(infilename): continue
     oldbase = os.path.splitext(filename)
     newname = infilename.replace('.new', '.old')
     output = os.rename(infilename, newname)
-
-
-
-
-
-
 
 pathDatas = "Datas"
 pathPages = "Datas1\Pages"
@@ -67,8 +58,6 @@ for x in (range(len(target))):
     f=open ("Datas\\Pages\\"+pagename +".new","w")
     f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+stringencodedcontents)
     f.close()
-
-
 
 f=open ("Datas\\data", "r")
 d = open ("Datas\\datasorted", "w")
