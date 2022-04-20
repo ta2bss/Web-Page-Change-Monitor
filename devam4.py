@@ -17,15 +17,15 @@ for x in (range(len(target))):
     soup=bs(page.text,'lxml')
     contents = soup.get_text()
 
-    oldpage = target[x]
-    oldpage = oldpage.replace(":","").replace("/","").replace("https","").replace("http","")
+    pagecontent = target[x]
+    pagecontent = pagecontent.replace(":","").replace("/","").replace("https","").replace("http","")
     hash_object = hashlib.md5(contents.encode())
 
     f=open ("data","a")
     f.write(target[x] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
 
-    f=open (oldpage +".dat","w")
+    f=open (pagecontent +".dat","w")
     f.write(contents+"\n"+hash_object.hexdigest())
     f.close()
 
