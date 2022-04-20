@@ -4,6 +4,31 @@ from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
 import os
+import sys
+import pathlib
+
+
+PageFolder = 'Datas/Pages'
+Deletingoldfiles = os.listdir(PageFolder)
+
+for item in Deletingoldfiles:
+    if item.endswith(".old"):
+        os.remove(os.path.join(PageFolder, item))
+
+
+
+for filename in os.listdir(PageFolder):
+    infilename = os.path.join(PageFolder,filename)
+    if not os.path.isfile(infilename): continue
+    oldbase = os.path.splitext(filename)
+    newname = infilename.replace('.new', '.old')
+    output = os.rename(infilename, newname)
+
+
+
+
+
+
 
 pathDatas = "Datas"
 pathPages = "Datas1\Pages"
@@ -23,7 +48,7 @@ date_time = now.strftime("%Y-%m-%d %H:%M")
 #FOR  .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php PAGES
 s = requests_html.HTMLSession()
 
-target = ["https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en" ,"https://stackoverflow.com/"  ]
+target = ["https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
 
 for x in (range(len(target))):
     page = s.get(target[x])
