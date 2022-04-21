@@ -50,7 +50,7 @@ for url in (range(len(targeturls))):
     pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
     hash_object = hashlib.md5(encoded_page_contents)
 
-    f=open ("Datas\\data", "a")
+    f=open ("Datas/history", "a")
     f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
     string_encoded_page_contents = str (encoded_page_contents)
@@ -61,8 +61,8 @@ for url in (range(len(targeturls))):
 
     
 
-f=open ("Datas\\data", "r")
-d = open ("Datas\\datasorted", "w")
+f=open ("Datas/history", "r")
+d = open ("Datas/sortedhistory", "w")
 for line in sorted(f):
     d.write(line)
 f.close()

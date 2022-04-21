@@ -1,4 +1,6 @@
 import hashlib
+import time
+
 from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
@@ -36,7 +38,7 @@ date_time = now.strftime("%Y-%m-%d %H:%M")
 #FOR  .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php PAGES
 s = requests_html.HTMLSession()
 
-targeturls = ["https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
+targeturls = ["https://stackoverflow.com", "https://api.nodes.guru/aptos_update.sh","https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
 
 for url in (range(len(targeturls))):
     page = s.get(targeturls[url])
@@ -47,7 +49,7 @@ for url in (range(len(targeturls))):
     pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
     hash_object = hashlib.md5(encoded_page_contents)
 
-    f=open ("Datas\\data", "a")
+    f=open ("Datas/history", "a")
     f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
     string_encoded_page_contents = str (encoded_page_contents)
@@ -57,22 +59,28 @@ for url in (range(len(targeturls))):
     f.close()
 
     
-
-f=open ("Datas\\data", "r")
-d = open ("Datas\\datasorted", "w")
+time.sleep(1)
+f=open ("Datas/history", "r")
+d = open ("Datas/sortedhistory", "w")
 for line in sorted(f):
     d.write(line)
 f.close()
 d.close()
 
 for filename in Folder_Compilation:
-    file = open (filename ,"r")
-    filecontent = file.readlines()
-    filecontent = str(filecontent)
-    print (type (filecontent))
-    file.close()
-    print(filecontent)
+    print (filename)
+"""
+    f= open (filename,"r")
+    icerik= f.readlines()
+    f.close()
 
+    print(icerik)
+
+"""
+f=open ("stackoverflow.com.new" ,"r")
+icerik2= f.readlines()
+f.close()
+print(icerik2)
 
 
 

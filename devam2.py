@@ -26,7 +26,7 @@ for x in (range(len(target))):
     hash_object = hashlib.md5(contents.encode())
     print(hash_object.hexdigest())
 
-    f=open ("data","a")
+    f=open ("history","a")
     f.write(target[x] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
 
