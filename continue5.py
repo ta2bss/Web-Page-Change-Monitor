@@ -6,7 +6,7 @@ import requests_html
 from datetime import datetime
 import os
 
-PageFolder = 'Datas/Pages'
+PageFolder = r'Datas/Pages'
 Folder_Compilation = os.listdir(PageFolder)
 
 for filename in Folder_Compilation:
@@ -38,7 +38,7 @@ date_time = now.strftime("%Y-%m-%d %H:%M")
 #FOR  .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php PAGES
 s = requests_html.HTMLSession()
 
-targeturls = ["https://stackoverflow.com", "https://api.nodes.guru/aptos_update.sh","https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
+targeturls = ["https://api.nodes.guru/aptos_update.sh","https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
 
 for url in (range(len(targeturls))):
     page = s.get(targeturls[url])
@@ -67,20 +67,16 @@ for line in sorted(f):
 f.close()
 d.close()
 
+filelist =[]
 for filename in Folder_Compilation:
     print (filename)
-"""
-    f= open (filename,"r")
-    icerik= f.readlines()
-    f.close()
+    filelist.append(filename)
 
+print (filelist)
+
+for filename in filelist:
+    f= open ("Datas/Pages/"+filename,"r")
+    icerik = f.readlines()
     print(icerik)
 
-"""
-f=open ("stackoverflow.com.new" ,"r")
-icerik2= f.readlines()
-f.close()
-print(icerik2)
-
-
-
+    f.close
