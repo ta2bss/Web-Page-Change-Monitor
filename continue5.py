@@ -61,6 +61,9 @@ for url in (range(len(targeturls))):
     
 time.sleep(1)
 f=open ("Datas/history", "r")
+linenumbers = len(f.readlines())
+print (linenumbers)
+
 d = open ("Datas/sortedhistory", "w")
 for line in sorted(f):
     d.write(line)
@@ -78,5 +81,4 @@ for filename in filelist:
     f= open ("Datas/Pages/"+filename,"r")
     icerik = f.readlines()
     print(icerik)
-
     f.close
