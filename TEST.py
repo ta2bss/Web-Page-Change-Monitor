@@ -1,4 +1,6 @@
-Ornek_Metin = "Son beş karakteri silelim"
-Yeni_Metin = Ornek_Metin[5:]
-print(Yeni_Metin)
-
+f = open("Datas/history", "r+")
+lines = f.readlines()
+f.seek(0)
+f.truncate()
+f.writelines(lines[2:])
+f.close()

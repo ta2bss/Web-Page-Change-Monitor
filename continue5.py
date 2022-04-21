@@ -58,12 +58,23 @@ for url in (range(len(targeturls))):
     f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+string_encoded_page_contents)
     f.close()
 
-    
-time.sleep(1)
-f=open ("Datas/history", "r")
-linenumbers = len(f.readlines())
-print (linenumbers)
 
+f= open("Datas/history","r")
+linenumbers = len(f.readlines())
+f.close()
+
+print (linenumbers)
+if linenumbers > 70:
+    f = open("Datas/history", "r+")
+    lines = f.readlines()
+    f.seek(0)
+    f.truncate()
+    f.writelines(lines[10:])
+    f.close()
+
+
+
+f=open ("Datas/history", "r")
 d = open ("Datas/sortedhistory", "w")
 for line in sorted(f):
     d.write(line)
