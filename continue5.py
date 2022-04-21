@@ -62,8 +62,7 @@ for url in (range(len(targeturls))):
 f= open("Datas/history","r")
 linenumbers = len(f.readlines())
 f.close()
-
-print (linenumbers)
+print ("History Line Numbers: ",linenumbers)
 if linenumbers > 70:
     f = open("Datas/history", "r+")
     lines = f.readlines()
@@ -83,7 +82,6 @@ d.close()
 
 filelist =[]
 for filename in Folder_Compilation:
-    print (filename)
     filelist.append(filename)
 
 print (filelist)
