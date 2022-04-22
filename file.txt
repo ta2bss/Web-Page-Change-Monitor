@@ -2,7 +2,3 @@ Birinci Satır
 İkinci Satır
 Üçüncü Satır
 Dördüncü Satır
-Beşinci Satır
-Altıncı Satır
-Yedinci Satır
-Sekizinci Satır

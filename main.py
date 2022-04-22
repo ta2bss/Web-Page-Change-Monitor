@@ -7,15 +7,36 @@ import requests_html
 from datetime import datetime
 import os
 
-PageFolder = r'Datas/Pages'
-Folder_Compilation = os.listdir(PageFolder)
+PagesFolder = r'Datas/Pages'
+ControlFolder = r'Datas/Control'
+DatasFolder = r'Datas'
 
-for filename in Folder_Compilation:
+isExist = os.path.exists(ControlFolder)
+if not isExist:
+    os.makedirs(ControlFolder)
+    print("The new directory is created!")
+
+
+isExist = os.path.exists(PagesFolder)
+if not isExist:
+    os.makedirs(PagesFolder)
+    print("The new directory is created!")
+
+isExist = os.path.exists(DatasFolder)
+if not isExist:
+    os.makedirs(DatasFolder)
+    print("The new directory is created!")
+
+Folder_Pages = os.listdir(PagesFolder)
+
+
+
+for filename in Folder_Pages:
     if filename.endswith(".old"):
-        os.remove(os.path.join(PageFolder, filename))
+        os.remove(os.path.join(PagesFolder, filename))
 
-for filename in Folder_Compilation:
-    infilename = os.path.join(PageFolder,filename)
+for filename in Folder_Pages:
+    infilename = os.path.join(PagesFolder,filename)
     if not os.path.isfile(infilename): continue
     oldbase = os.path.splitext(filename)
     newname = infilename.replace('.new', '.old')
@@ -82,7 +103,7 @@ f.close()
 d.close()
 
 filelist =[]
-for filename in Folder_Compilation:
+for filename in Folder_Pages:
     filelist.append(filename)
 
 print (filelist)
