@@ -1,4 +1,5 @@
 import hashlib
+import re
 import time
 
 from bs4 import BeautifulSoup as bs
@@ -86,8 +87,13 @@ for filename in Folder_Compilation:
 
 print (filelist)
 
+
 for filename in filelist:
     f= open ("Datas/Pages/"+filename,"r")
     icerik = f.readlines()
     print(icerik)
     f.close
+
+filenumber= len(filelist)
+print ("File Number: ",filenumber)
+
