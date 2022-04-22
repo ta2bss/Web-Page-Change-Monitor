@@ -1,4 +1,7 @@
 import hashlib
+import re
+import time
+
 from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
@@ -11,26 +14,30 @@ DatasFolder = r'Datas'
 isExist = os.path.exists(ControlFolder)
 if not isExist:
     os.makedirs(ControlFolder)
-    print("The new directory is created!")
+    #print("The new directory is created!")
 
 
 isExist = os.path.exists(PagesFolder)
 if not isExist:
     os.makedirs(PagesFolder)
-    print("The new directory is created!")
+    #print("The new directory is created!")
 
 isExist = os.path.exists(DatasFolder)
 if not isExist:
     os.makedirs(DatasFolder)
-    print("The new directory is created!")
+    #print("The new directory is created!")
 
 Folder_Pages = os.listdir(PagesFolder)
+Folder_Control = os.listdir(ControlFolder)
 
-
+for filename in Folder_Control:
+    if filename.endswith(".ctrl"):
+        os.remove(os.path.join(ControlFolder, filename))
 
 for filename in Folder_Pages:
     if filename.endswith(".old"):
         os.remove(os.path.join(PagesFolder, filename))
+
 
 for filename in Folder_Pages:
     infilename = os.path.join(PagesFolder,filename)
@@ -57,7 +64,12 @@ date_time = now.strftime("%Y-%m-%d %H:%M")
 #FOR  .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php PAGES
 s = requests_html.HTMLSession()
 
-targeturls = ["https://api.nodes.guru/aptos_update.sh","https://nodes.guru"  , "https://nodes.guru/subspace/setup-guide/en", "https://nodes.guru/aptos/setup-guide/en"  ]
+targeturls = ["http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/",
+              "http://ta2bss.com",
+              "https://api.nodes.guru/aptos_update.sh",
+              "https://nodes.guru",
+              "https://nodes.guru/subspace/setup-guide/en",
+              "https://nodes.guru/aptos/setup-guide/en"]
 
 for url in (range(len(targeturls))):
     page = s.get(targeturls[url])
@@ -81,7 +93,7 @@ for url in (range(len(targeturls))):
 f= open("Datas/history","r")
 linenumbers = len(f.readlines())
 f.close()
-print ("History Line Numbers: ",linenumbers)
+#print ("History Line Numbers: ",linenumbers)
 if linenumbers > 70:
     f = open("Datas/history", "r+")
     lines = f.readlines()
@@ -103,15 +115,56 @@ filelist =[]
 for filename in Folder_Pages:
     filelist.append(filename)
 
-print (filelist)
+#print (filelist)
 
 
 for filename in filelist:
     f= open ("Datas/Pages/"+filename,"r")
     contents = f.readlines()
-    print(contents)
+    #print(contents)
     f.close
 
 filenumber= len(filelist)
-print ("File Number: ",filenumber)
+#print ("File Number: ",filenumber)
+
+for i in (filelist):
+
+    i = i [:-4]
+
+    n = open ("Datas/Pages/"+i+".new","r")
+    nhashline = n.readlines()
+    nhashcode = (re.search("===>(.+?)<===",nhashline[1]).group(1))
+    n.close()
+
+    o = open("Datas/Pages/" + i + ".old", "r")
+    ohashline = o.readlines()
+    ohashcode = (re.search("===>(.+?)<===", ohashline[1]).group(1))
+    o.close()
+
+    #print("new",i,nhashcode)
+    #print("old",i,ohashcode)
+
+    f= open ("Datas/Control/"+i+".ctrl","a")
+    f.write(nhashcode+"\n")
+    f.write(ohashcode+"\n")
+    f.close()
+
+    f= open ("Datas/Control/"+i+".ctrl","r")
+    data = f.readlines()
+    if (len(data)) > 2:
+        continue
+
+    if data[0] != data[1] :
+
+        print(i, " CHANGED!")
+        log=open("log.txt","a")
+        log.write(date_time+" "+i+" CHANGED \n")
+        log.close()
+
+    f.close()
+
+
+
+
+
 
