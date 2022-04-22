@@ -1,7 +1,4 @@
 import hashlib
-import re
-import time
-
 from bs4 import BeautifulSoup as bs
 import requests_html
 from datetime import datetime
@@ -111,8 +108,8 @@ print (filelist)
 
 for filename in filelist:
     f= open ("Datas/Pages/"+filename,"r")
-    icerik = f.readlines()
-    print(icerik)
+    contents = f.readlines()
+    print(contents)
     f.close
 
 filenumber= len(filelist)
