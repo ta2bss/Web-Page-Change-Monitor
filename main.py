@@ -7,38 +7,44 @@ import requests_html
 from datetime import datetime
 import os
 
+#Date and Time module
+now = datetime.now()
+date_time = now.strftime("%Y-%m-%d %H:%M")
+
+
+#specifying folders
 PagesFolder = r'Datas/Pages'
 ControlFolder = r'Datas/Control'
 DatasFolder = r'Datas'
 
-isExist = os.path.exists(ControlFolder)
-if not isExist:
-    os.makedirs(ControlFolder)
-    #print("The new directory is created!")
-
-
-isExist = os.path.exists(PagesFolder)
-if not isExist:
-    os.makedirs(PagesFolder)
-    #print("The new directory is created!")
-
-isExist = os.path.exists(DatasFolder)
-if not isExist:
-    os.makedirs(DatasFolder)
-    #print("The new directory is created!")
+#Creating Working Folders if they don't exist
+try:
+    os.mkdir(DatasFolder)
+except:
+    pass
+try:
+    os.mkdir(PagesFolder)
+except:
+    pass
+try:
+    os.mkdir(ControlFolder)
+except:
+    pass
 
 Folder_Pages = os.listdir(PagesFolder)
 Folder_Control = os.listdir(ControlFolder)
 
+#Deleting control files on every run
 for filename in Folder_Control:
     if filename.endswith(".ctrl"):
         os.remove(os.path.join(ControlFolder, filename))
 
+#Deleting old contents files on every run
 for filename in Folder_Pages:
     if filename.endswith(".old"):
         os.remove(os.path.join(PagesFolder, filename))
 
-
+#Renaming previos runs new contents as current runs old contents
 for filename in Folder_Pages:
     infilename = os.path.join(PagesFolder,filename)
     if not os.path.isfile(infilename): continue
@@ -46,27 +52,9 @@ for filename in Folder_Pages:
     newname = infilename.replace('.new', '.old')
     output = os.rename(infilename, newname)
 
-pathDatas = "Datas"
-pathPages = "Datas1\Pages"
-
-try:
-    os.mkdir(pathDatas)
-except:
-    pass
-try:
-    os.mkdir(pathPages)
-except:
-    pass
-
-now = datetime.now()
-date_time = now.strftime("%Y-%m-%d %H:%M")
-
-#FOR  .htm , .html , .shtml , .asp , .pl , .cgi , .jsp. , php PAGES
+###### the codes have been edited up to this point
 s = requests_html.HTMLSession()
-
-targeturls = ["http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/",
-              "http://ta2bss.com",
-              "https://api.nodes.guru/aptos_update.sh",
+targeturls = ["https://api.nodes.guru/aptos_update.sh",
               "https://nodes.guru",
               "https://nodes.guru/subspace/setup-guide/en",
               "https://nodes.guru/aptos/setup-guide/en"]
