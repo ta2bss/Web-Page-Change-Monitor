@@ -55,11 +55,13 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","https://testnet.run/","https://testnet.run/services/23","https://testnet.run/"]
+targeturls = ["http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/","https://nodes.guru","http://ta2bss.com","https://testnet.run/","https://testnet.run/services/23","https://testnet.run/"]
 
 
 ###### the codes have been edited up to this point
 for url in (range(len(targeturls))):
+    print ("Checking ",targeturls[url])
+    start = (time.perf_counter())
     page = s.get(targeturls[url])
     soup=bs(page.text,'lxml')
     pagecontents = soup.get_text()
@@ -78,6 +80,9 @@ for url in (range(len(targeturls))):
     f=open ("Datas\\Pages\\"+pagename +".new","w")
     f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+pagecontents)
     f.close()
+    end = (time.perf_counter())
+    print("Checked ", targeturls[url]," at ", round((end-start),2) , " seconds.")
+    print ("-------------")
 
 
 f= open("Datas/history","r")
@@ -109,6 +114,7 @@ for filename in Folder_Pages:
 
 
 for filename in filelist:
+
     f= open ("Datas/Pages/"+filename,"r")
     contents = f.readlines()
     #print(contents)
