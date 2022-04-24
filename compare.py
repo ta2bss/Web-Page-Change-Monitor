@@ -2,7 +2,7 @@
 file_1 = open('Datas\Pages\\ta2bss.com.new', 'r')
 file_2 = open('Datas\Pages\\ta2bss.com.old', 'r')
 
-print("Comparing files ", " @ " + 'Datas\Pages\\ta2bss.com.new', " # " + 'Datas\Pages\\ta2bss.com.old', sep='\n')
+print("Comparing files ", " new " + 'Datas\Pages\\ta2bss.com.new', " old " + 'Datas\Pages\\ta2bss.com.old', sep='\n')
 
 file_1_line = file_1.readline()
 file_2_line = file_2.readline()
@@ -16,12 +16,6 @@ with open('Datas\Pages\\ta2bss.com.new') as file1:
     with open('Datas\Pages\\ta2bss.com.old') as file2:
         same = set(file1).intersection(file2)
 
-print("Common Lines in Both Files")
-
-for line in same:
-    print(line, end='')
-
-print('\n')
 print("Difference Lines in Both Files")
 while file_1_line != '' or file_2_line != '':
 
@@ -32,17 +26,17 @@ while file_1_line != '' or file_2_line != '':
     # Compare the lines from both file
     if file_1_line != file_2_line:
 
-        # otherwise output the line on file1 and use @ sign
+        # otherwise output the line on file1 and use new sign
         if file_1_line == '':
-            print("@", "Line-%d" % line_no, file_1_line)
+            print("old", "Line-%d" % line_no, file_1_line)
         else:
-            print("@-", "Line-%d" % line_no, file_1_line)
+            print("old-", "Line-%d" % line_no, file_1_line)
 
         # otherwise output the line on file2 and use # sign
         if file_2_line == '':
-            print("#", "Line-%d" % line_no, file_2_line)
+            print("new", "Line-%d" % line_no, file_2_line)
         else:
-            print("#+", "Line-%d" % line_no, file_2_line)
+            print("new+", "Line-%d" % line_no, file_2_line)
 
         # Print a empty line
         print()

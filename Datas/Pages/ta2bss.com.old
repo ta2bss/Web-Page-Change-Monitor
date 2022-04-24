@@ -1,5 +1,5 @@
-Date-Time:2022-04-24 16:31
-PageHash:===>d2b19582d8d995d5c8e4c7dea6823813<===
+Date-Time:2022-04-24 16:58
+PageHash:===>6a49eab2aeafebd3701f133070876de3<===
 
 
 
@@ -60,7 +60,7 @@ PythonMenuyu ac
 
 Python ile coingecko.com API’den basit veri cekimi.
 Python ile dosya yaratma ve icerik olusturma , icerik cekme.
-Python: Dosyada basta veya sondaki satirlari silme islemi.
+Python: Dosyada basta veya sondaki satirlari silme islemleri:
 Python’da String’i bastan ve sondan kesmek:
 Python ile Gmail hesabindan e-posta yollama:
 Python ile FTP sunucusuna baglanma ve dosya gonderme
@@ -86,9 +86,9 @@ Hakkinda
 
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemi.
+Python: Dosyada basta veya sondaki satirlari silme islemleri:
 
-Bir dosyadaki satirlari silmek icin gerekli kod ornegi : (ornegin dosya.txt icerigi asagidaki gibi olsun: Birinci Satir Ikinci Satir Ucuncu Satir Dorduncu Satir Besinci Satir Altinci Satir Yedinci Satir Sekizinci Satir Dokuzuncu Satir Onuncu Satir Ustteki 2 satiri silmek icin Sonuc: Ucuncu SatirDorduncu SatirBesinci SatirAltinci SatirYedinci SatirSekizinci SatirDokuzuncu SatirOnuncu Satir Alttaki iki satiri silmek icin… Okumaya devam et Python: Dosyada basta veya sondaki satirlari silme islemi.
+Bir dosyadaki satirlari silmek icin gerekli kod ornegi : (ornegin dosya.txt icerigi asagidaki gibi olsun: Birinci Satir Ikinci Satir Ucuncu Satir Dorduncu Satir Besinci Satir Altinci Satir Yedinci Satir Sekizinci Satir Dokuzuncu Satir Onuncu Satir Ustteki 2 satiri silmek icin Sonuc: Ucuncu SatirDorduncu SatirBesinci SatirAltinci SatirYedinci SatirSekizinci SatirDokuzuncu SatirOnuncu Satir Alttaki iki satiri silmek icin… Okumaya devam et Python: Dosyada basta veya sondaki satirlari silme islemleri:
 
 
 Yayim tarihi 21/04/2022Python olarak siniflandirilmis python, satir ile etiketlenmis 
@@ -193,7 +193,7 @@ Arama…
 Son Yazilar
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemi.
+Python: Dosyada basta veya sondaki satirlari silme islemleri:
 
 
 Python’da String’i bastan ve sondan kesmek:
