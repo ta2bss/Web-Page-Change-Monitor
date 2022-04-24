@@ -44,7 +44,7 @@ for filename in Folder_Pages:
     if filename.endswith(".old"):
         os.remove(os.path.join(PagesFolder, filename))
 
-#Renaming previos runs new contents as current runs old contents
+#Renaming previos runs new content files as current runs old contents files
 for filename in Folder_Pages:
     infilename = os.path.join(PagesFolder,filename)
     if not os.path.isfile(infilename): continue
@@ -52,18 +52,21 @@ for filename in Folder_Pages:
     newname = infilename.replace('.new', '.old')
     output = os.rename(infilename, newname)
 
-###### the codes have been edited up to this point
 s = requests_html.HTMLSession()
-targeturls = ["https://api.nodes.guru/aptos_update.sh",
-              "https://nodes.guru",
-              "https://nodes.guru/subspace/setup-guide/en",
-              "https://nodes.guru/aptos/setup-guide/en"]
 
+#Web Pages to Moniror
+targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","http://ta2bss.com"]
+
+
+###### the codes have been edited up to this point
 for url in (range(len(targeturls))):
     page = s.get(targeturls[url])
     soup=bs(page.text,'lxml')
     pagecontents = soup.get_text()
+    pagecontents=pagecontents.replace("ü","u").replace("ı","i").replace("Ü","U").replace("Ğ","G").replace("ğ","g").replace("İ","I").replace("Ş","S").replace("ş","s").replace("ö","o").replace("Ö","O").replace("Ç","C").replace("ç","c")
     encoded_page_contents = pagecontents.encode()
+
+
     pagename = targeturls[url]
     pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
     hash_object = hashlib.md5(encoded_page_contents)
@@ -71,10 +74,9 @@ for url in (range(len(targeturls))):
     f=open ("Datas/history", "a")
     f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
-    string_encoded_page_contents = str (encoded_page_contents)
-    string_encoded_page_contents = string_encoded_page_contents.replace("\\n"," ").replace("\\t"," ")
+
     f=open ("Datas\\Pages\\"+pagename +".new","w")
-    f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+string_encoded_page_contents)
+    f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+pagecontents)
     f.close()
 
 
