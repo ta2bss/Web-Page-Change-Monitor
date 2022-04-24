@@ -55,7 +55,7 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","https://testnet.run/","https://testnet.run/services/23","https://stackoverflow.com/"]
+targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","https://testnet.run/","https://testnet.run/services/23","https://testnet.run/"]
 
 
 ###### the codes have been edited up to this point
@@ -146,15 +146,60 @@ for i in (filelist):
 
     if data[0] != data[1] :
 
-        print(i, " CHANGED!")
+        # Open File in Read Mode
+        file_1 = open('Datas\Pages\\'+i+'.new', 'r')
+        file_2 = open('Datas\Pages\\'+i+'.old', 'r')
+
+        print("Comparing files ", " new " + 'Datas\Pages\\'+i+'.new',
+              " old " + 'Datas\Pages\\'+i+'.old', sep='\n')
+
+        file_1_line = file_1.readline()
+        file_2_line = file_2.readline()
+
+        # Line Counter
+        line_no = 1
+
+        print()
+
+        with open('Datas\Pages\\'+i+'.new') as file1:
+            with open('Datas\Pages\\'+i+'.old') as file2:
+                same = set(file1).intersection(file2)
+
+        print("Difference Lines in Both Files")
+        while file_1_line != '' or file_2_line != '':
+
+            # Removing whitespaces
+            file_1_line = file_1_line.rstrip()
+            file_2_line = file_2_line.rstrip()
+
+            # Compare the lines from both file
+            if file_1_line != file_2_line:
+
+                # otherwise output the line on file1 and use new sign
+                if file_1_line == '':
+                    print("new", "Line-%d" % line_no, file_1_line)
+                else:
+                    print("new-", "Line-%d" % line_no, file_1_line)
+
+                # otherwise output the line on file2 and use # sign
+                if file_2_line == '':
+                    print("old", "Line-%d" % line_no, file_2_line)
+                else:
+                    print("old+", "Line-%d" % line_no, file_2_line)
+
+                # Print a empty line
+                print()
+
+            # Read the next line from the file
+            file_1_line = file_1.readline()
+            file_2_line = file_2.readline()
+
+            line_no += 1
+
+        file_1.close()
+        file_2.close()
         log=open("log.txt","a")
         log.write(date_time+" "+i+" CHANGED \n")
         log.close()
 
     f.close()
-
-
-
-
-
-
