@@ -55,7 +55,7 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","http://ta2bss.com"]
+targeturls = ["https://nodes.guru/aptos/setup-guide/en","https://nodes.guru","https://testnet.run/","https://testnet.run/services/23","https://stackoverflow.com/"]
 
 
 ###### the codes have been edited up to this point
