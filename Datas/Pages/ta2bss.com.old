@@ -1,15 +1,10 @@
-Date-Time:2022-04-24 22:11
-PageHash:===>6a49eab2aeafebd3701f133070876de3<===
+Date-Time:2022-04-25 12:19
+PageHash:===>fc5543131a1be21988f653d4f9dcd4c1<===
 
 
 
 
-TA2BSS – Her Telden
-
-
-
-
-
+TA2BSS  Her Telden
 
 
 
@@ -42,7 +37,12 @@ TA2BSS – Her Telden
 
 
 
-Icerige gec
+
+
+
+
+
+erie ge
 
 
 
@@ -51,34 +51,34 @@ TA2BSS
 
 
 
-Menu					 
+Men					 
 Kilitle					 
 
 
 Ana sayfa
-PythonMenuyu ac
+PythonMeny a
 
-Python ile coingecko.com API’den basit veri cekimi.
-Python ile dosya yaratma ve icerik olusturma , icerik cekme.
-Python: Dosyada basta veya sondaki satirlari silme islemleri:
-Python’da String’i bastan ve sondan kesmek:
-Python ile Gmail hesabindan e-posta yollama:
-Python ile FTP sunucusuna baglanma ve dosya gonderme
-Python ile tarih ve saat yazdirma:
-Python : re.search – replace
-Python: try-except basit ornek
-Python: mp3 dosyasi oynatma
-Python – def ve return
-Python: Program akisinda satir numarasini yazdirma
-
-
-Blockchain-KriptoMenuyu ac
-
-Python ile coingecko.com API’den basit veri cekimi.
-Microsoft 365 Excel’e Coinmarketcap API’den data cekmek
+Python ile coingecko.com APIden basit veri ekimi.
+Python ile dosya yaratma ve ierik oluturma , ierik ekme.
+Python: Dosyada bata veya sondaki satrlar silme ilemi:
+Pythonda Stringi batan ve sondan kesmek:
+Python ile Gmail hesabndan e-posta yollama:
+Python ile FTP sunucusuna balanma ve dosya gnderme
+Python ile tarih ve saat yazdrma:
+Python : re.search  replace
+Python: try-except basit rnek
+Python: mp3 dosyas oynatma
+Python  def ve return
+Python: Program aknda satr numarasn yazdrma
 
 
-Hakkinda
+Blockchain-KriptoMeny a
+
+Python ile coingecko.com APIden basit veri ekimi.
+Microsoft 365 Excele Coinmarketcap APIden data ekmek
+
+
+Hakknda
  
 
 
@@ -86,129 +86,129 @@ Hakkinda
 
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemleri:
+Python: Dosyada bata veya sondaki satrlar silme ilemi:
 
-Bir dosyadaki satirlari silmek icin gerekli kod ornegi : (ornegin dosya.txt icerigi asagidaki gibi olsun: Birinci Satir Ikinci Satir Ucuncu Satir Dorduncu Satir Besinci Satir Altinci Satir Yedinci Satir Sekizinci Satir Dokuzuncu Satir Onuncu Satir Ustteki 2 satiri silmek icin Sonuc: Ucuncu SatirDorduncu SatirBesinci SatirAltinci SatirYedinci SatirSekizinci SatirDokuzuncu SatirOnuncu Satir Alttaki iki satiri silmek icin… Okumaya devam et Python: Dosyada basta veya sondaki satirlari silme islemleri:
-
-
-Yayim tarihi 21/04/2022Python olarak siniflandirilmis python, satir ile etiketlenmis 
+Bir dosyadaki satrlar silmek iin gerekli kod rnei : (rnein dosya.txt ierii aadaki gibi olsun: Birinci Satr kinci Satr nc Satr Drdnc Satr Beinci Satr Altnc Satr Yedinci Satr Sekizinci Satr Dokuzuncu Satr Onuncu Satr stteki 2 satr silmek iin Sonu: nc SatrDrdnc SatrBeinci SatrAltnc SatrYedinci SatrSekizinci SatrDokuzuncu SatrOnuncu Satr Alttaki iki satr silmek iin Okumaya devam et Python: Dosyada bata veya sondaki satrlar silme ilemi:
 
 
-
-Python’da String’i bastan ve sondan kesmek:
-
-Asagidaki ornegi kullanarak bir String’in sonundan istedigimiz kadar karakteri kesebiliriz. Ornegin burada son 5 karakteri kesiyoruz. Sonuc: Son bes karakteri si Bu sefer de sadece son bes karakteri birakalim (Yani toplamda 25 karakterden olusan metnimizin ilk 20 karakterini keselim Sonuc:lelim Ayni islemleri bastaki 5 karakteri silmek icin yapmak istersek: Sonuc:es karakteri silelim
-
-
-Yayim tarihi 21/04/2022Python olarak siniflandirilmis python, string ile etiketlenmis 
+Yaym tarihi 21/04/2022Python olarak snflandrlm python, satr ile etiketlenmi 
 
 
 
-Python ile tarih ve saat yazdirma:
+Pythonda Stringi batan ve sondan kesmek:
 
-Tarih ve saat yazdirmak icin datetime modulunu kullaniyoruz %Y : Sene%m : Ay%d : Gun %H : Saat%M : Dakika%S : Saniye Ile istedigimiz formatta cikti alabiliriz
-
-
-Yayim tarihi 12/04/2022Python olarak siniflandirilmis datetime, python, tarih, zaman ile etiketlenmis 
+Aadaki rnei kullanarak bir Stringin sonundan istediimiz kadar karakteri kesebiliriz. rnein burada son 5 karakteri kesiyoruz. Sonu: Son be karakteri si Bu sefer de sadece son be karakteri brakalm (Yani toplamda 25 karakterden oluan metnimizin ilk 20 karakterini keselim Sonu:lelim Ayn ilemleri bataki 5 karakteri silmek iin yapmak istersek: Sonu:e karakteri silelim
 
 
-
-Python: try-except basit ornek
-
-Yazdigimiz kodlarda bir hata oldugunda veya islem bir hataya sebep program durur ve bir hata mesaji cikar. Ornegin 10 sayisini 0’a bolmeye calistigimizda: Goruldugu gibi ZeroDivisionError hatasi aldik ve program durdu. Peki biz programin durmasini degil de bize bir mesaj cikarip tekrar denememizi istese bunu nasil kodlamamiz gerekirdi. Bu durumda try / except komutlarini kullanabiliriz.… Okumaya devam et Python: try-except basit ornek
-
-
-Yayim tarihi 28/01/2022Python olarak siniflandirilmis except, python, try ile etiketlenmis 
+Yaym tarihi 21/04/2022Python olarak snflandrlm python, string ile etiketlenmi 
 
 
 
-Python ile coingecko.com API’den basit veri cekimi.
+Python ile tarih ve saat yazdrma:
 
-Python kullanarak Coingecko API’den veri cekmenin kolay sekli asagidaki sekilde yapilabilir. Oncelikle Coingecko sitesinde kriptolara verilen Coin ID’leri bilmemiz lazim. 2022 Ocak tarihindeki liste su sekilde idi. Acilan dosyada arama yaparak kullanmak istedigimiz coinin id sinin notunu aliyoruz. Ornegin; Bitcoin icin yaptigimiz aramada coin id’si ilk satirda da goruldugu gibi “bitcoin”. Bu listenin guncel haline… Okumaya devam et Python ile coingecko.com API’den basit veri cekimi.
-
-
-Yayim tarihi 25/01/2022Kripto olarak siniflandirilmis API, coingecko.com, Kripto, python ile etiketlenmis 
+Tarih ve saat yazdrmak iin datetime modln kullanyoruz %Y : Sene%m : Ay%d : Gn %H : Saat%M : Dakika%S : Saniye le istediimiz formatta kt alabiliriz
 
 
-
-Python ile dosya yaratma ve icerik olusturma , icerik cekme.
-
-Pythonda dosya olusturmak ve icerik olusturmak icin kullanacagimiz komutlar “open” ve “write” komutlaridir. Yeni bir dosya yaratmak icin asagidaki ornege goz atalim: Burada deneme.txt isimli bir dosya yaratiyoruz ve icerik ekliyoruz. Bu dosyadaki icerigi okumak icin de “readlines” komutunu kullanabiliriz yukaridaki kod dosya icerigini ekrana yazdiracaktir. Komutlarla beraber kullandigimiz parametreler:“r” : Okumak icin bir dosya… Okumaya devam et Python ile dosya yaratma ve icerik olusturma , icerik cekme.
-
-
-Yayim tarihi 27/09/2021Python olarak siniflandirilmis  
+Yaym tarihi 12/04/2022Python olarak snflandrlm datetime, python, tarih, zaman ile etiketlenmi 
 
 
 
-Python: Program akisinda satir numarasini yazdirma
+Python: try-except basit rnek
 
-Bazen kodlarimizi yazarken program akisinda nerede oldugumuzu gormemiz gerekebilir. Bunun icin kodumuza asagidaki satiri yapistirirsak , program akisi esnasinda programin hangi satirda oldugunu izleyebiliriz.
-
-
-Yayim tarihi 04/06/2021Python olarak siniflandirilmis python, satir ile etiketlenmis 
+Yazdmz kodlarda bir hata olduunda veya ilem bir hataya sebep program durur ve bir hata mesaj kar. rnein 10 saysn 0a blmeye altmzda: Grld gibi ZeroDivisionError hatas aldk ve program durdu. Peki biz programn durmasn deil de bize bir mesaj karp tekrar denememizi istese bunu nasl kodlamamz gerekirdi. Bu durumda try / except komutlarn kullanabiliriz. Okumaya devam et Python: try-except basit rnek
 
 
-
-Python ile Gmail hesabindan e-posta yollama:
-
-Python kullanarak Gmail hesabinizdan e-posta yollamak icin ilk is olarak Gmail hesabimizin “Guvenligi Dusuk Uygulamalara” erisiminin acik olduguna emin olmamiz gerekiyor. Bunu asagidaki linkten kontrol edip eger acik degilse acmaliyiz. https://myaccount.google.com/lesssecureapps Ornek 1:E-Postayi gondermemiz icin smtplib modulunu kullaniyoruz. Ilk defa e-posta yolladigimizda Google’dan bir guvenlik uyarisi gelebilir. (Bilinmeyen bir program hesabiniza erismeye calisiyor tarzinda.) Bu… Okumaya devam et Python ile Gmail hesabindan e-posta yollama:
-
-
-Yayim tarihi 01/06/2021Python olarak siniflandirilmis e-posta, python, smtp, smtplib ile etiketlenmis 
+Yaym tarihi 28/01/2022Python olarak snflandrlm except, python, try ile etiketlenmi 
 
 
 
-Python – def ve return
+Python ile coingecko.com APIden basit veri ekimi.
 
-def – basit bir ornek: Python’da fonksiyonlar kullanmamizin en onemli sebepleri programimizda ayni islemleri birden fazla yaptirmak istememiz durumunda ayni kodu tekrar tekrar yazmayarak hem kodumuzun daha derli toplu gorunmesini saglamak hem de vakit kazanmaktir. Basit bir ornek vermek gerekirse, mesela programizinin belli yerlerinde a ve b degiskenlerinin toplamlarininin 7’ye bolumu sonucunda kalan degerin faktoriyelini… Okumaya devam et Python – def ve return
-
-
-Yayim tarihi 29/05/2021Python olarak siniflandirilmis def, fonksiyon, python, return ile etiketlenmis 
+Python kullanarak Coingecko APIden veri ekmenin kolay ekli aadaki ekilde yaplabilir. ncelikle Coingecko sitesinde kriptolara verilen Coin IDleri bilmemiz lazm. 2022 Ocak tarihindeki liste u ekilde idi. Alan dosyada arama yaparak kullanmak istediimiz coinin id sinin notunu alyoruz. rnein; Bitcoin iin yaptmz aramada coin idsi ilk satrda da grld gibi bitcoin. Bu listenin gncel haline Okumaya devam et Python ile coingecko.com APIden basit veri ekimi.
 
 
-
-Python ile FTP sunucusuna baglanma ve dosya gonderme
-
-ftplib: Python kullanarak bir ftp sunucusuna baglanmanin yollarindan biri ‘ftplib’ modulunu kullanmak. Ornek kod asagidaki gibi.Oncelikle sunucuya baglaniyor, daha sonra deneme.txt isimli dosyayi sunucuya yolluyoruz.Sonunda da FTP baglantisini kesiyoruz. Eger dosyayi sunucuda bulunan belli bir klasore yollamak istiyorsak, cwd komutunu kullanabiliriz. Ornegin dosyayi asagidaki ornekte sunucudaki “\birinciklasor\ikinciklasor” konumuna koyalim. ‘ftplib’ modulu ile ilgili daha genis… Okumaya devam et Python ile FTP sunucusuna baglanma ve dosya gonderme
+Yaym tarihi 25/01/2022Kripto olarak snflandrlm API, coingecko.com, Kripto, python ile etiketlenmi 
 
 
-Yayim tarihi 23/05/2021Python olarak siniflandirilmis ftp, ftplib, python ile etiketlenmis 
+
+Python ile dosya yaratma ve ierik oluturma , ierik ekme.
+
+Pythonda dosya oluturmak ve ierik oluturmak iin kullanacamz komutlar open ve write komutlardr. Yeni bir dosya yaratmak iin aadaki rnee gz atalm: Burada deneme.txt isimli bir dosya yaratyoruz ve ierik ekliyoruz. Bu dosyadaki ierii okumak iin de readlines komutunu kullanabiliriz yukardaki kod dosya ieriini ekrana yazdracaktr. Komutlarla beraber kullandmz parametreler:r : Okumak iin bir dosya Okumaya devam et Python ile dosya yaratma ve ierik oluturma , ierik ekme.
 
 
-Yazi dolasimi
+Yaym tarihi 27/09/2021Python olarak snflandrlm  
+
+
+
+Python: Program aknda satr numarasn yazdrma
+
+Bazen kodlarmz yazarken program aknda nerede olduumuzu grmemiz gerekebilir. Bunun iin kodumuza aadaki satr yaptrrsak , program ak esnasnda programn hangi satrda olduunu izleyebiliriz.
+
+
+Yaym tarihi 04/06/2021Python olarak snflandrlm python, satr ile etiketlenmi 
+
+
+
+Python ile Gmail hesabndan e-posta yollama:
+
+Python kullanarak Gmail hesabnzdan e-posta yollamak iin ilk i olarak Gmail hesabmzn Gvenlii Dk Uygulamalara eriiminin ak olduuna emin olmamz gerekiyor. Bunu aadaki linkten kontrol edip eer ak deilse amalyz. https://myaccount.google.com/lesssecureapps rnek 1:E-Postay gndermemiz icin smtplib modln kullanyoruz. lk defa e-posta yolladmzda Googledan bir gvenlik uyars gelebilir. (Bilinmeyen bir program hesabnza erimeye alyor tarznda.) Bu Okumaya devam et Python ile Gmail hesabndan e-posta yollama:
+
+
+Yaym tarihi 01/06/2021Python olarak snflandrlm e-posta, python, smtp, smtplib ile etiketlenmi 
+
+
+
+Python  def ve return
+
+def  basit bir rnek: Pythonda fonksiyonlar kullanmamzn en nemli sebepleri programmzda ayn ilemleri birden fazla yaptrmak istememiz durumunda ayn kodu tekrar tekrar yazmayarak hem kodumuzun daha derli toplu grnmesini salamak hem de vakit kazanmaktr. Basit bir rnek vermek gerekirse, mesela programznn belli yerlerinde a ve b deikenlerinin toplamlarnnn 7ye blm sonucunda kalan deerin faktoriyelini Okumaya devam et Python  def ve return
+
+
+Yaym tarihi 29/05/2021Python olarak snflandrlm def, fonksiyon, python, return ile etiketlenmi 
+
+
+
+Python ile FTP sunucusuna balanma ve dosya gnderme
+
+ftplib: Python kullanarak bir ftp sunucusuna balanmann yollarndan biri ftplib modln kullanmak. rnek kod aadaki gibi.ncelikle sunucuya balanyor, daha sonra deneme.txt isimli dosyay sunucuya yolluyoruz.Sonunda da FTP balantsn kesiyoruz. Eer dosyay sunucuda bulunan belli bir klasre yollamak istiyorsak, cwd komutunu kullanabiliriz. rnein dosyay aadaki rnekte sunucudaki \birinciklasor\ikinciklasor konumuna koyalm. ftplib modl ile ilgili daha geni Okumaya devam et Python ile FTP sunucusuna balanma ve dosya gnderme
+
+
+Yaym tarihi 23/05/2021Python olarak snflandrlm ftp, ftplib, python ile etiketlenmi 
+
+
+Yaz dolam
 Sayfa 1
 Sayfa 2
-Daha eski yazilar 
+Daha eski yazlar 
  
 
 
 
 
-Arama…
+Arama
 
 
 
 
 
-Son Yazilar
+Son Yazlar
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemleri:
+Python: Dosyada bata veya sondaki satrlar silme ilemi:
 
 
-Python’da String’i bastan ve sondan kesmek:
+Pythonda Stringi batan ve sondan kesmek:
 
 
-Python ile tarih ve saat yazdirma:
+Python ile tarih ve saat yazdrma:
 
 
-Python: try-except basit ornek
+Python: try-except basit rnek
 
 
-Python ile coingecko.com API’den basit veri cekimi.
+Python ile coingecko.com APIden basit veri ekimi.
 
 
-Son YorumlarMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin ta2bssMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin halilMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin hakanMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin Ahmet Ersay 
+Son YorumlarMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin ta2bssMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin halilMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin hakanMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin Ahmet Ersay 
 
 
 
@@ -220,7 +220,7 @@ E-posta
 
 
 
-WordPress ile guclendirilmistir.			
+WordPress ile glendirilmitir.			
 
 
 

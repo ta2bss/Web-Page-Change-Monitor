@@ -55,40 +55,47 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/","https://nodes.guru","http://ta2bss.com","https://testnet.run/","https://testnet.run/services/23","https://testnet.run/"]
+targeturls = ["https://api.nodes.guru/aptos.sh","https://nodes.guru/aptos/setup-guide/en","http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/","https://nodes.guru","http://ta2bss.com"]
 
 
-###### the codes have been edited up to this point
+#Check above web pages in for loop
 for url in (range(len(targeturls))):
     print ("Checking ",targeturls[url])
+
+    #starting chronometer
     start = (time.perf_counter())
     page = s.get(targeturls[url])
     soup=bs(page.text,'lxml')
     pagecontents = soup.get_text()
-    pagecontents=pagecontents.replace("ü","u").replace("ı","i").replace("Ü","U").replace("Ğ","G").replace("ğ","g").replace("İ","I").replace("Ş","S").replace("ş","s").replace("ö","o").replace("Ö","O").replace("Ç","C").replace("ç","c")
+
+    #remove non-ASCII characters
+    pagecontents= re.sub(r'[^\x00-\x7f]', r'',pagecontents)
+
     encoded_page_contents = pagecontents.encode()
-
-
     pagename = targeturls[url]
     pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
     hash_object = hashlib.md5(encoded_page_contents)
 
+    #creating and writing history file
     f=open ("Datas/history", "a")
     f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
     f.close()
 
+    #creating and writing webpages to files with new content
     f=open ("Datas\\Pages\\"+pagename +".new","w")
     f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+pagecontents)
     f.close()
+    #stop chronometer and calculate time
     end = (time.perf_counter())
     print("Checked ", targeturls[url]," at ", round((end-start),2) , " seconds.")
     print ("-------------")
 
 
+
 f= open("Datas/history","r")
 linenumbers = len(f.readlines())
 f.close()
-#print ("History Line Numbers: ",linenumbers)
+#Limit size of history file
 if linenumbers > 70:
     f = open("Datas/history", "r+")
     lines = f.readlines()
@@ -98,7 +105,7 @@ if linenumbers > 70:
     f.close()
 
 
-
+#Sort Alphapatical history file
 f=open ("Datas/history", "r")
 d = open ("Datas/sortedhistory", "w")
 for line in sorted(f):
@@ -106,39 +113,36 @@ for line in sorted(f):
 f.close()
 d.close()
 
+# Create file list
 filelist =[]
 for filename in Folder_Pages:
     filelist.append(filename)
 
-#print (filelist)
-
-
 for filename in filelist:
+    try:
 
-    f= open ("Datas/Pages/"+filename,"r")
-    contents = f.readlines()
-    #print(contents)
-    f.close
+        f= open ("Datas/Pages/"+filename,"r")
+        contents = f.readlines()
+        f.close
+
+    except:
+        continue
 
 filenumber= len(filelist)
-#print ("File Number: ",filenumber)
 
 for i in (filelist):
-
     i = i [:-4]
-
-    n = open ("Datas/Pages/"+i+".new","r")
-    nhashline = n.readlines()
-    nhashcode = (re.search("===>(.+?)<===",nhashline[1]).group(1))
-    n.close()
-
+    try:
+        n = open ("Datas/Pages/"+i+".new","r")
+        nhashline = n.readlines()
+        nhashcode = (re.search("===>(.+?)<===",nhashline[1]).group(1))
+        n.close()
+    except:
+        continue
     o = open("Datas/Pages/" + i + ".old", "r")
     ohashline = o.readlines()
     ohashcode = (re.search("===>(.+?)<===", ohashline[1]).group(1))
     o.close()
-
-    #print("new",i,nhashcode)
-    #print("old",i,ohashcode)
 
     f= open ("Datas/Control/"+i+".ctrl","a")
     f.write(nhashcode+"\n")
@@ -150,21 +154,21 @@ for i in (filelist):
     if (len(data)) > 2:
         continue
 
+    #if contents are different
     if data[0] != data[1] :
 
-        # Open File in Read Mode
-        file_1 = open('Datas\Pages\\'+i+'.new', 'r')
-        file_2 = open('Datas\Pages\\'+i+'.old', 'r')
+        # Read old and new content files
+        newfile = open('Datas\Pages\\'+i+'.new', 'r')
+        oldfile = open('Datas\Pages\\'+i+'.old', 'r')
 
         print("Comparing files ", " new " + 'Datas\Pages\\'+i+'.new',
               " old " + 'Datas\Pages\\'+i+'.old', sep='\n')
 
-        file_1_line = file_1.readline()
-        file_2_line = file_2.readline()
+        newfile_line = newfile.readline()
+        oldfile_line = oldfile.readline()
 
         # Line Counter
         line_no = 1
-
         print()
 
         with open('Datas\Pages\\'+i+'.new') as file1:
@@ -172,38 +176,37 @@ for i in (filelist):
                 same = set(file1).intersection(file2)
 
         print("Difference Lines in Both Files")
-        while file_1_line != '' or file_2_line != '':
+        while newfile_line != '' or oldfile_line != '':
 
-            # Removing whitespaces
-            file_1_line = file_1_line.rstrip()
-            file_2_line = file_2_line.rstrip()
+            # Removing spaces
+            newfile_line = newfile_line.rstrip()
+            oldfile_line = oldfile_line.rstrip()
 
-            # Compare the lines from both file
-            if file_1_line != file_2_line:
+            # Compare the lines
+            if newfile_line != oldfile_line:
 
-                # otherwise output the line on file1 and use new sign
-                if file_1_line == '':
-                    print("new", "Line-%d" % line_no, file_1_line)
+                # otherwise output the line on file1
+                if newfile_line == '':
+                    print("new content:", "Line-%d" % line_no, newfile_line)
                 else:
-                    print("new-", "Line-%d" % line_no, file_1_line)
+                    print("new content:", "Line-%d" % line_no, newfile_line)
 
-                # otherwise output the line on file2 and use # sign
-                if file_2_line == '':
-                    print("old", "Line-%d" % line_no, file_2_line)
+                # otherwise output the line on file2 and use "old"
+                if oldfile_line == '':
+                    print("old content:", "Line-%d" % line_no, oldfile_line)
                 else:
-                    print("old+", "Line-%d" % line_no, file_2_line)
+                    print("old content:", "Line-%d" % line_no, oldfile_line)
 
-                # Print a empty line
-                print()
+                print ("")
+            # Read Next line
+            newfile_line = newfile.readline()
+            oldfile_line = oldfile.readline()
 
-            # Read the next line from the file
-            file_1_line = file_1.readline()
-            file_2_line = file_2.readline()
-
+            # Line Counter
             line_no += 1
 
-        file_1.close()
-        file_2.close()
+        newfile.close()
+        oldfile.close()
         log=open("log.txt","a")
         log.write(date_time+" "+i+" CHANGED \n")
         log.close()

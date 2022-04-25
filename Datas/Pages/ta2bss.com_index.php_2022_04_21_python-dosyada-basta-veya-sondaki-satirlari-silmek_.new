@@ -1,15 +1,10 @@
-Date-Time:2022-04-25 09:58
-PageHash:===>d79f90062e281740a1883ecdbe875dd7<===
+Date-Time:2022-04-25 12:20
+PageHash:===>779a32ff35bbdfa5bf9c6e9d3b62be1e<===
 
 
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemleri: – TA2BSS
-
-
-
-
-
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:  TA2BSS
 
 
 
@@ -47,7 +42,12 @@ Python: Dosyada basta veya sondaki satirlari silme islemleri: – TA2BSS
 
 
 
-Icerige gec
+
+
+
+
+
+erie ge
 
 
 
@@ -56,34 +56,34 @@ TA2BSS
 
 
 
-Menu					 
+Men					 
 Kilitle					 
 
 
 Ana sayfa
-PythonMenuyu ac
+PythonMeny a
 
-Python ile coingecko.com API’den basit veri cekimi.
-Python ile dosya yaratma ve icerik olusturma , icerik cekme.
-Python: Dosyada basta veya sondaki satirlari silme islemleri:
-Python’da String’i bastan ve sondan kesmek:
-Python ile Gmail hesabindan e-posta yollama:
-Python ile FTP sunucusuna baglanma ve dosya gonderme
-Python ile tarih ve saat yazdirma:
-Python : re.search – replace
-Python: try-except basit ornek
-Python: mp3 dosyasi oynatma
-Python – def ve return
-Python: Program akisinda satir numarasini yazdirma
-
-
-Blockchain-KriptoMenuyu ac
-
-Python ile coingecko.com API’den basit veri cekimi.
-Microsoft 365 Excel’e Coinmarketcap API’den data cekmek
+Python ile coingecko.com APIden basit veri ekimi.
+Python ile dosya yaratma ve ierik oluturma , ierik ekme.
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:
+Pythonda Stringi batan ve sondan kesmek:
+Python ile Gmail hesabndan e-posta yollama:
+Python ile FTP sunucusuna balanma ve dosya gnderme
+Python ile tarih ve saat yazdrma:
+Python : re.search  replace
+Python: try-except basit rnek
+Python: mp3 dosyas oynatma
+Python  def ve return
+Python: Program aknda satr numarasn yazdrma
 
 
-Hakkinda
+Blockchain-KriptoMeny a
+
+Python ile coingecko.com APIden basit veri ekimi.
+Microsoft 365 Excele Coinmarketcap APIden data ekmek
+
+
+Hakknda
  
 
 
@@ -91,85 +91,85 @@ Hakkinda
 
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemleri: 
+Python: Dosyada bata veya sondaki satrlar silme ilemleri: 
 
-Bir dosyadaki satirlari silmek icin gerekli kod ornegi :  (ornegin dosya.txt icerigi asagidaki gibi olsun:
-Birinci Satir
-Ikinci Satir
-Ucuncu Satir
-Dorduncu Satir
-Besinci Satir
-Altinci Satir
-Yedinci Satir
-Sekizinci Satir
-Dokuzuncu Satir
-Onuncu Satir
-Ustteki 2 satiri silmek icin
+Bir dosyadaki satrlar silmek iin gerekli kod rnei :  (rnein dosya.txt ierii aadaki gibi olsun:
+Birinci Satr
+kinci Satr
+nc Satr
+Drdnc Satr
+Beinci Satr
+Altnc Satr
+Yedinci Satr
+Sekizinci Satr
+Dokuzuncu Satr
+Onuncu Satr
+stteki 2 satr silmek iin
 f = open("dosya.txt", "r+")
 lines = f.readlines()
 f.seek(0)
 f.truncate()
 f.writelines(lines[2:])
 f.close()
-Sonuc:
-Ucuncu SatirDorduncu SatirBesinci SatirAltinci SatirYedinci SatirSekizinci SatirDokuzuncu SatirOnuncu Satir
-Alttaki iki satiri silmek icin gerekli kod ornegi:
+Sonu:
+nc SatrDrdnc SatrBeinci SatrAltnc SatrYedinci SatrSekizinci SatrDokuzuncu SatrOnuncu Satr
+Alttaki iki satr silmek iin gerekli kod rnei:
 f = open("dosya.txt", "r+")
 lines = f.readlines()
 f.seek(0)
 f.truncate()
 f.writelines(lines[:-2])
 f.close()
-Sonuc:
-Birinci SatirIkinci SatirUcuncu SatirDorduncu SatirBesinci SatirAltinci SatirYedinci SatirSekizinci Satir
+Sonu:
+Birinci Satrkinci Satrnc SatrDrdnc SatrBeinci SatrAltnc SatrYedinci SatrSekizinci Satr
 
 
 
-Yayim tarihi 21/04/2022ta2bss tarafindanPython olarak siniflandirilmis python, satir ile etiketlenmis 
+Yaym tarihi 21/04/2022ta2bss tarafndanPython olarak snflandrlm python, satr ile etiketlenmi 
 
 
 
-Yorum Gonderin Cevabi iptal etE-posta hesabiniz yayimlanmayacak. Gerekli alanlar * ile isaretlenmislerdirYorum Isim * 
+Yorum Gnderin Cevab iptal etE-posta hesabnz yaymlanmayacak. Gerekli alanlar * ile iaretlenmilerdirYorum sim * 
 E-posta * 
-Internet sitesi 
- Bir dahaki sefere yorum yaptigimda kullanilmak uzere adimi, e-posta adresimi ve web site adresimi bu tarayiciya kaydet.
+nternet sitesi 
+ Bir dahaki sefere yorum yaptmda kullanlmak zere adm, e-posta adresimi ve web site adresimi bu taraycya kaydet.
  
 
  
 
 
-Yazi dolasimi
-Onceki yaziPython’da String’i bastan ve sondan kesmek:
+Yaz dolam
+nceki yazPythonda Stringi batan ve sondan kesmek:
  
 
 
 
 
-Arama…
+Arama
 
 
 
 
 
-Son Yazilar
+Son Yazlar
 
 
-Python: Dosyada basta veya sondaki satirlari silme islemleri:
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:
 
 
-Python’da String’i bastan ve sondan kesmek:
+Pythonda Stringi batan ve sondan kesmek:
 
 
-Python ile tarih ve saat yazdirma:
+Python ile tarih ve saat yazdrma:
 
 
-Python: try-except basit ornek
+Python: try-except basit rnek
 
 
-Python ile coingecko.com API’den basit veri cekimi.
+Python ile coingecko.com APIden basit veri ekimi.
 
 
-Son YorumlarMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin ta2bssMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin halilMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin hakanMicrosoft 365 Excel’e Coinmarketcap API’den data cekmek icin Ahmet Ersay 
+Son YorumlarMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin ta2bssMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin halilMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin hakanMicrosoft 365 Excele Coinmarketcap APIden data ekmek iin Ahmet Ersay 
 
 
 
@@ -181,7 +181,7 @@ E-posta
 
 
 
-WordPress ile guclendirilmistir.			
+WordPress ile glendirilmitir.			
 
 
 
