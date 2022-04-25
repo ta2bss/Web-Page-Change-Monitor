@@ -1,5 +1,5 @@
-Date-Time:2022-04-25 12:19
-PageHash:===>fc5543131a1be21988f653d4f9dcd4c1<===
+Date-Time:2022-04-25 12:41
+PageHash:===>bbd64f7db719a10e32a64ebe40d32055<===
 
 
 
@@ -60,7 +60,7 @@ PythonMeny a
 
 Python ile coingecko.com APIden basit veri ekimi.
 Python ile dosya yaratma ve ierik oluturma , ierik ekme.
-Python: Dosyada bata veya sondaki satrlar silme ilemi:
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:
 Pythonda Stringi batan ve sondan kesmek:
 Python ile Gmail hesabndan e-posta yollama:
 Python ile FTP sunucusuna balanma ve dosya gnderme
@@ -86,9 +86,9 @@ Hakknda
 
 
 
-Python: Dosyada bata veya sondaki satrlar silme ilemi:
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:
 
-Bir dosyadaki satrlar silmek iin gerekli kod rnei : (rnein dosya.txt ierii aadaki gibi olsun: Birinci Satr kinci Satr nc Satr Drdnc Satr Beinci Satr Altnc Satr Yedinci Satr Sekizinci Satr Dokuzuncu Satr Onuncu Satr stteki 2 satr silmek iin Sonu: nc SatrDrdnc SatrBeinci SatrAltnc SatrYedinci SatrSekizinci SatrDokuzuncu SatrOnuncu Satr Alttaki iki satr silmek iin Okumaya devam et Python: Dosyada bata veya sondaki satrlar silme ilemi:
+Bir dosyadaki satrlar silmek iin gerekli kod rnei : (rnein dosya.txt ierii aadaki gibi olsun: Birinci Satr kinci Satr nc Satr Drdnc Satr Beinci Satr Altnc Satr Yedinci Satr Sekizinci Satr Dokuzuncu Satr Onuncu Satr stteki 2 satr silmek iin Sonu: nc SatrDrdnc SatrBeinci SatrAltnc SatrYedinci SatrSekizinci SatrDokuzuncu SatrOnuncu Satr Alttaki iki satr silmek iin Okumaya devam et Python: Dosyada bata veya sondaki satrlar silme ilemleri:
 
 
 Yaym tarihi 21/04/2022Python olarak snflandrlm python, satr ile etiketlenmi 
@@ -193,7 +193,7 @@ Arama
 Son Yazlar
 
 
-Python: Dosyada bata veya sondaki satrlar silme ilemi:
+Python: Dosyada bata veya sondaki satrlar silme ilemleri:
 
 
 Pythonda Stringi batan ve sondan kesmek:

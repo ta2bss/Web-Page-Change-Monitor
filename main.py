@@ -10,6 +10,7 @@ import os
 #Date and Time module
 now = datetime.now()
 date_time = now.strftime("%Y-%m-%d %H:%M")
+dateonly = now.strftime("%Y-%m-%d")
 
 
 #specifying folders
@@ -31,6 +32,7 @@ try:
 except:
     pass
 
+dailylogs = open ("Datas\\Control\\"+ dateonly +"-logs","a")
 Folder_Pages = os.listdir(PagesFolder)
 Folder_Control = os.listdir(ControlFolder)
 
@@ -61,6 +63,7 @@ targeturls = ["https://api.nodes.guru/aptos.sh","https://nodes.guru/aptos/setup-
 #Check above web pages in for loop
 for url in (range(len(targeturls))):
     print ("Checking ",targeturls[url])
+    dailylogs.write ("Checking "+targeturls[url]+"\n")
 
     #starting chronometer
     start = (time.perf_counter())
