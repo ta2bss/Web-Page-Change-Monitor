@@ -91,7 +91,9 @@ for url in (range(len(targeturls))):
     #stop chronometer and calculate time
     end = (time.perf_counter())
     print("Checked ", targeturls[url]," at ", round((end-start),2) , " seconds.")
+    dailylogs.write("Checked "+ targeturls[url]  + "\n")
     print ("-------------")
+    dailylogs.write("----------------"+ "\n")
 
 
 
@@ -164,8 +166,9 @@ for i in (filelist):
         newfile = open('Datas\Pages\\'+i+'.new', 'r')
         oldfile = open('Datas\Pages\\'+i+'.old', 'r')
 
-        print("Comparing files ", " new " + 'Datas\Pages\\'+i+'.new',
-              " old " + 'Datas\Pages\\'+i+'.old', sep='\n')
+        print("Comparing files ", " new " + 'Datas\Pages\\'+i+'.new'," old " + 'Datas\Pages\\'+i+'.old', sep='\n')
+
+        dailylogs.write ("*****\n"+"Comparing files"+"\n"+"Datas\\Pages\\" +i+ ".new"+"\n" "Datas\\Pages\\" + i + ".old"+ "\n"+"\n")
 
         newfile_line = newfile.readline()
         oldfile_line = oldfile.readline()
@@ -173,6 +176,7 @@ for i in (filelist):
         # Line Counter
         line_no = 1
         print()
+        dailylogs.write("")
 
         with open('Datas\Pages\\'+i+'.new') as file1:
             with open('Datas\Pages\\'+i+'.old') as file2:
@@ -191,16 +195,21 @@ for i in (filelist):
                 # otherwise output the line on file1
                 if newfile_line == '':
                     print("new content:", "Line-%d" % line_no, newfile_line)
+                    dailylogs.write(("new content :"+ "Line-%d " % line_no+ newfile_line+"\n"))
                 else:
                     print("new content:", "Line-%d" % line_no, newfile_line)
+                    dailylogs.write("new content :"+ "Line-%d " % line_no + newfile_line+"\n")
 
                 # otherwise output the line on file2 and use "old"
                 if oldfile_line == '':
                     print("old content:", "Line-%d" % line_no, oldfile_line)
+                    dailylogs.write("old content :"+ "Line-%d " % line_no + oldfile_line +"\n")
                 else:
                     print("old content:", "Line-%d" % line_no, oldfile_line)
+                    dailylogs.write("old content :" + "Line-%d " % line_no + oldfile_line +"\n")
 
                 print ("")
+                dailylogs.write("\n")
             # Read Next line
             newfile_line = newfile.readline()
             oldfile_line = oldfile.readline()
