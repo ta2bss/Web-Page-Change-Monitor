@@ -11,6 +11,7 @@ import os
 now = datetime.now()
 date_time = now.strftime("%Y-%m-%d %H:%M")
 dateonly = now.strftime("%Y-%m-%d")
+timeonly = now.strftime("%H:%M")
 
 
 #specifying folders
@@ -33,6 +34,10 @@ except:
     pass
 
 dailylogs = open ("Datas\\Control\\"+ dateonly +"-logs","a")
+
+dailylogs.write("******"+"\n")
+dailylogs.write(timeonly+"\n")
+dailylogs.write("******"+"\n")
 Folder_Pages = os.listdir(PagesFolder)
 Folder_Control = os.listdir(ControlFolder)
 
@@ -168,7 +173,7 @@ for i in (filelist):
 
         print("Comparing files ", " new " + 'Datas\Pages\\'+i+'.new'," old " + 'Datas\Pages\\'+i+'.old', sep='\n')
 
-        dailylogs.write ("*****\n"+"Comparing files"+"\n"+"Datas\\Pages\\" +i+ ".new"+"\n" "Datas\\Pages\\" + i + ".old"+ "\n"+"\n")
+        dailylogs.write ("\n"+"COMPARING FILES"+"\n"+"Datas\\Pages\\" +i+ ".new"+"\n" "Datas\\Pages\\" + i + ".old"+ "\n"+"\n")
 
         newfile_line = newfile.readline()
         oldfile_line = oldfile.readline()
