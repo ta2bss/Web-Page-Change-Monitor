@@ -62,7 +62,7 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["https://api.nodes.guru/aptos.sh","https://nodes.guru/aptos/setup-guide/en","http://ta2bss.com/index.php/2022/04/21/python-dosyada-basta-veya-sondaki-satirlari-silmek/","https://nodes.guru","http://ta2bss.com"]
+targeturls = ["https://www.google.com" , "https://stackoverflow.com/" ]
 
 
 #Check above web pages in for loop
@@ -205,7 +205,7 @@ for i in (filelist):
                     print("new content:", "Line-%d" % line_no, newfile_line)
                     dailylogs.write("new content :"+ "Line-%d " % line_no + newfile_line+"\n")
 
-                # otherwise output the line on file2 and use "old"
+                # otherwise output the line on file2
                 if oldfile_line == '':
                     print("old content:", "Line-%d" % line_no, oldfile_line)
                     dailylogs.write("old content :"+ "Line-%d " % line_no + oldfile_line +"\n")
@@ -229,3 +229,4 @@ for i in (filelist):
         log.close()
 
     f.close()
+    dailylogs.close()
