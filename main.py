@@ -62,43 +62,52 @@ for filename in Folder_Pages:
 s = requests_html.HTMLSession()
 
 #Web Pages to Moniror
-targeturls = ["https://www.google.com" , "https://stackoverflow.com/" ]
+targeturls = ["http://www.google.com" ,"http://www.awrongaddress.us", "https://github.com/"  ]
 
 
 #Check above web pages in for loop
 for url in (range(len(targeturls))):
-    print ("Checking ",targeturls[url])
-    dailylogs.write ("Checking "+targeturls[url]+"\n")
+    try:
+        print ("Checking ",targeturls[url])
+        dailylogs.write ("Checking "+targeturls[url]+"\n")
 
-    #starting chronometer
-    start = (time.perf_counter())
-    page = s.get(targeturls[url])
-    soup=bs(page.text,'lxml')
-    pagecontents = soup.get_text()
+        #starting chronometer
+        start = (time.perf_counter())
+        page = s.get(targeturls[url])
+        soup=bs(page.text,'lxml')
+        pagecontents = soup.get_text()
 
-    #remove non-ASCII characters
-    pagecontents= re.sub(r'[^\x00-\x7f]', r'',pagecontents)
+        #remove non-ASCII characters
+        pagecontents= re.sub(r'[^\x00-\x7f]', r'',pagecontents)
 
-    encoded_page_contents = pagecontents.encode()
-    pagename = targeturls[url]
-    pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
-    hash_object = hashlib.md5(encoded_page_contents)
+        encoded_page_contents = pagecontents.encode()
+        pagename = targeturls[url]
+        pagename = pagename.replace(":","").replace("//","").replace("https","").replace("http","").replace("/","_")
+        hash_object = hashlib.md5(encoded_page_contents)
 
-    #creating and writing history file
-    f=open ("Datas/history", "a")
-    f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
-    f.close()
+        #creating and writing history file
+        f=open ("Datas/history", "a")
+        f.write(targeturls[url] +" --> "+ date_time+" --> "+ hash_object.hexdigest()+"\n")
+        f.close()
 
-    #creating and writing webpages to files with new content
-    f=open ("Datas\\Pages\\"+pagename +".new","w")
-    f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+pagecontents)
-    f.close()
-    #stop chronometer and calculate time
-    end = (time.perf_counter())
-    print("Checked ", targeturls[url]," at ", round((end-start),2) , " seconds.")
-    dailylogs.write("Checked "+ targeturls[url]  + "\n")
-    print ("-------------")
-    dailylogs.write("----------------"+ "\n")
+        #creating and writing webpages to files with new content
+        f=open ("Datas\\Pages\\"+pagename +".new","w")
+        f.write("Date-Time:"+date_time+"\nPageHash:===>"+hash_object.hexdigest()+"<==="+"\n"+pagecontents)
+        f.close()
+        #stop chronometer and calculate time
+        end = (time.perf_counter())
+        print("Checked ", targeturls[url]," at ", round((end-start),2) , " seconds.")
+        dailylogs.write("Checked "+ targeturls[url]  + "\n")
+        print ("-------------")
+        dailylogs.write("----------------"+ "\n")
+
+    except:
+        #if the address is wrong or url is not reachable
+        print ("!!!Couldn't check url :",targeturls[url]," please check address!!!")
+        print("-------------")
+        dailylogs.write("!!!Couldn't check url !!!:" + targeturls[url] + "\n")
+        dailylogs.write("----------------" + "\n")
+        continue
 
 
 
